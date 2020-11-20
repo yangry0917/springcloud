@@ -1,0 +1,36 @@
+test:
+  uri: lb://eureka-client
+test2:
+  uri: https://spring.io/projects/spring-cloud
+server:
+  port: 8899
+
+spring:
+  application:
+    name: gateway-client
+  cloud:
+    gateway:
+      routes:
+        - id: host_route
+          uri: ${test.uri}
+          predicates:
+            - Path=/client/**
+
+        - id: test_route
+          uri: ${test2.uri}
+          predicates:
+            - Path=/spring-cloud/**
+
+
+logging:
+  level:
+    org.springframework.cloud.gateway: TRACE
+    org.springframework.http.server.reactive: DEBUG
+    org.springframework.web.reactive: DEBUG
+    reacotr.ipc.netty: DEBUG
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8890/eureka
+  instance:
+    prefer-ip-address: true

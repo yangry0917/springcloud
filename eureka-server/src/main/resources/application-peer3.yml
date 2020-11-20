@@ -1,0 +1,21 @@
+spring:
+  application:
+    #此处应用名称要一致
+    name: eureka-server #spring-cloud-eureka #peer1
+server:
+  port: 8002
+#C盘 ->  Windows -> System32 -> drives -> etc -> hosts文件
+eureka:
+  instance:
+    hostname: peer3
+  client:
+    #指定是否要注册到注册中心（
+    #register-with-eureka: false
+    #指定是否要从注册中心获取服务
+    #fetch-registry: false
+    #双节点注册中心，serviceUrl指向peer2
+    service-url:
+      default-zone: http://peer1:8000/eureka/,http://peer2:8001/eureka/
+  server:
+    #触发自我保护机制的阀值
+    renewal-percent-threshold: 0.49

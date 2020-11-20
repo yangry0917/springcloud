@@ -1,0 +1,18 @@
+server:
+  port: 8892
+spring:
+  application:
+    name: eureka-client
+  #虽然配置文件名叫application-peer1,但profiles不是peer1,而是 provider-8891
+  profiles: provider-8892
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://peer1:8000/eureka/,http://peer2:8001/eureka/,http://peer3:8002/eureka/
+  instance:
+    prefer-ip-address: true
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'

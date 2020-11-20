@@ -1,0 +1,28 @@
+---
+server:
+  port: 8891
+spring:
+  application:
+    name: eureka-client
+  profiles: provider-8891
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://peer1:8000/eureka/,http://peer2:8001/eureka/,http://peer3:8002/eureka/
+  instance:
+    prefer-ip-address: true
+    hostname: localhost
+
+---
+server:
+  port: 8892
+spring:
+  application:
+    name: eureka-client
+  profiles: provider-8892
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://peer1:8000/eureka/,http://peer2:8001/eureka/,http://peer3:8002/eureka/
+  instance:
+    prefer-ip-address: true

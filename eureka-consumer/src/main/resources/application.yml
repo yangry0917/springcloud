@@ -1,0 +1,30 @@
+spring:
+  application:
+    name: eureka-consumer
+
+server:
+  port: 8003
+
+eureka:
+  client:
+    service-url:
+      #Eureka的客户端启动报错Cannot execute request on any known server，无法注册到eureka  ;springcloud版本换了，springboot版本也换了，就是无解，终于把default-zone改成了defaultZone解决了。好坑
+      defaultZone: http://peer1:8000/eureka/
+
+#Feign中已经依赖了Hystrix
+#springcloud2020版废了hystrix
+feign:
+  hystrix:
+    enabled: true
+
+#springcloud version 2020引入了sentinel作为熔断
+#feign:
+#  sentinel:
+#    enabled: true
+
+#添加sentinel依赖后 暴露/actuator/sentinel端点
+#management:
+#  endpoints:
+#    web:
+#      exposure:
+#        include: '*'
