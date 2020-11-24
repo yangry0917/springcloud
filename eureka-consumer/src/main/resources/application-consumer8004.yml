@@ -1,0 +1,50 @@
+spring:
+  application:
+    name: eureka-consumer8004
+
+server:
+  port: 8004
+
+eureka:
+  client:
+    service-url:
+      #Eureka的客户端启动报错Cannot execute request on any known server，无法注册到eureka  ;springcloud版本换了，springboot版本也换了，就是无解，终于把default-zone改成了defaultZone解决了。好坑
+      defaultZone: http://peer1:8000/eureka/
+  #设置所属集群名称
+  #instance:
+  #  metadata-map:
+  #    cluster: my-consumer8004
+#Feign中已经依赖了Hystrix
+#springcloud2020版废了hystrix
+feign:
+  hystrix:
+    enabled: true
+
+#springcloud version 2020引入了sentinel作为熔断
+#feign:
+#  sentinel:
+#    enabled: true
+
+#hystrix dashboard 展示需要添加的配置  hystrix dashboard需要开放的点
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+      base-path: /
+
+#hystrix dashboard 展示需要添加的配置 加上这句话，否则会报If it should be allowed add it to hystrix.dashboard.proxyStreamAllowList
+hystrix:
+  dashboard:
+    proxy-stream-allow-list: "*"
+
+  #turbine:
+  # true 同一主机上的服务通过host和port的组合来进行区分，默认为true
+  # false 以host来区分不同的服务,这会使得在本地调试的时候,本机上的不同服务聚合成一个服务来统计，监控中host集群数会为1了因为本地host是一样的
+  #  combine-host-port: true
+  #turbine.app-config: 配置Euraka中的serviceId列表，表明监控哪些服务
+  #  app-config: eureka-consumer
+  # 1. 省略clusterNameExpression时，此时turbine.aggregator.clusterConfig需要配置想要监控的应用名称，需要监控应用名称必须大写
+  # 2. 当clusterNameExpression: default时，turbine.aggregator.clusterConfig可以不写，因为默认就是default
+  # 3. 当clusterNameExpression: metadata['cluster']时，假设想要监控的应用配置了eureka.instance.metadata-map.cluster: consumer，则需要配置，同时turbine.aggregator.clusterConfig: consumer
+#  cluster-name-expression: new String('default')
