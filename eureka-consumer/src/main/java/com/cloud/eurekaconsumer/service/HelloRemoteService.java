@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 
-@FeignClient(name="eureka-client",fallback = FeignServiceFallback.class)
+@FeignClient(name = "eureka-client", fallback = FeignServiceFallback.class)
 public interface HelloRemoteService {
     @RequestMapping(value = "/client/hello")
     String hello();

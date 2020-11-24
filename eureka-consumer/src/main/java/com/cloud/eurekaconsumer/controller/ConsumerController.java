@@ -9,11 +9,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 
-
 @RestController
 public class ConsumerController {
     @Autowired
-   private  HelloRemoteService helloRemote;
+    private HelloRemoteService helloRemote;
 
     @HystrixCommand(fallbackMethod = "serviceFallback")
     @RequestMapping("/hello")

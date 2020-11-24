@@ -6,6 +6,7 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="hystrix-turbine" />
         <module name="eurekaconsumer" />
         <module name="eureka-client" />
         <module name="springcloud" />
@@ -13,9 +14,11 @@
         <module name="eureka-server" />
         <module name="ribbon-server" />
         <module name="gateway-server" />
+        <module name="spring-cloud-config-server" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="eureka-consumer" target="1.8" />
       <module name="eurekaconsumer" target="1.8" />
     </bytecodeTargetLevel>
   </component>
@@ -26,7 +29,9 @@
       <module name="eureka-server" options="-parameters" />
       <module name="eurekaconsumer" options="-parameters" />
       <module name="gateway-server" options="-parameters" />
+      <module name="hystrix-turbine" options="-parameters" />
       <module name="ribbon-server" options="-parameters" />
+      <module name="spring-cloud-config-server" options="-parameters" />
     </option>
   </component>
 </project>
