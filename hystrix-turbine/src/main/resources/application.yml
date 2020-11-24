@@ -1,0 +1,59 @@
+server:
+  port: 8020
+spring:
+  application:
+    name: hystrix-turbine
+eureka:
+  client:
+    service-url:
+      defaultZone: http://peer1:8000/eureka/,http://peer2:8001/eureka/,http://peer3:8002/eureka/
+    #客户端每隔30秒从Eureka服务上更新一次服务信息
+    #registry-fetch-interval-seconds: 30
+    #需要将我的服务注册到eureka上
+    #register-with-eureka: true
+    #需要检索服务
+    #fetch-registry: true
+  #心跳检测检测与续约时间
+  #instance:
+    #告诉服务端，如果我10s之内没有给你发心跳，就代表我故障了，将我剔除掉，默认90s
+    #Eureka服务端在收到最后一次心跳之后等待的时间上限，单位为秒，超过则剔除（客户端告诉服务端按照此规则等待自己）
+    #lease-expiration-duration-in-seconds: 10
+    #每隔2s向服务端发送一次心跳，证明自已依然活着，默认30s
+    #Eureka客户端向服务端发送心跳的时间间隔，单位为秒（客户端告诉服务端自己会按照该规则）
+    #lease-renewal-interval-in-seconds: 2
+    # 启用ip配置 这样在注册中心列表中看见的是以ip+端口呈现的
+    #prefer-ip-address: true
+    # 实例名称  最后呈现地址：ip:2002
+    #instance-id: ${spring.cloud.client.ip-address}:${server.port}
+
+turbine:
+  # true 同一主机上的服务通过host和port的组合来进行区分，默认为true
+  # false 以host来区分不同的服务,这会使得在本地调试的时候,本机上的不同服务聚合成一个服务来统计，监控中host集群数会为1了因为本地host是一样的
+  combine-host-port: true
+  #turbine.app-config: 配置Euraka中的serviceId列表，表明监控哪些服务
+  app-config: eureka-consumer8003,eureka-consumer8004
+  # 1. 省略clusterNameExpression时，此时turbine.aggregator.clusterConfig需要配置想要监控的应用名称，需要监控应用名称必须大写
+  # 2. 当clusterNameExpression: default时，turbine.aggregator.clusterConfig可以不写，因为默认就是default
+  # 3. 当clusterNameExpression: metadata['cluster']时，假设想要监控的应用配置了eureka.instance.metadata-map.cluster: consumer，则需要配置，同时turbine.aggregator.clusterConfig: consumer
+  cluster-name-expression: new String('default')
+  aggregator:
+    cluster-config: default
+
+#hystrix dashboard 展示需要添加的配置  hystrix dashboard需要开放的点
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+      base-path: /
+
+#Feign中已经依赖了Hystrix
+#springcloud2020版废了hystrix
+feign:
+  hystrix:
+    enabled: true
+
+#hystrix dashboard 展示需要添加的配置 加上这句话，否则会报If it should be allowed add it to hystrix.dashboard.proxyStreamAllowList
+hystrix:
+  dashboard:
+    proxy-stream-allow-list: "*"
