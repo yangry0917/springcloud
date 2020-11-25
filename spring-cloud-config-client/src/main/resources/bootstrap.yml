@@ -1,0 +1,19 @@
+#必须删除application.yml,而保留bootstrap.yml,否则会一直报 找不到值得错误
+spring:
+    cloud:
+        config:
+            uri: http://localhost:8030/ #配置中心地址
+            label: master  # 分支名称
+            name: neo-config   # 配置文件名称
+            profile: dev   # 读取后缀名称  上述3个综合: master分支上config-dev.yml的配置文件被读取http://localhost:3344/master/config-dev.yml
+            discovery:
+                enabled: true
+                service-id: spring-cloud-config-server
+    application:
+        name: spring-cloud-config-client
+eureka:
+    client:
+        service-url:
+            defaultZone: http://peer1:8000/eureka/,http://peer2:8001/eureka/,http://peer3:8002/eureka/
+server:
+    port: 8031

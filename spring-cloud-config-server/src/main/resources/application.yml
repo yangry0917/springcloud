@@ -7,12 +7,22 @@ spring:
     config:
       server:
         git:
-          uri: https://github.com/ityouknow/spring-cloud-examples  #https://github.com/yangry0917/springcloud-config.git #https://github.com/ityouknow/spring-cloud-examples    # 配置git仓库的地址
-          search-paths: config-repo                         # git仓库地址下的相对地址，可以配置多个，用,分割。
-          username:                                             # git仓库的账号
-          password:                                             # git仓库的密码
+          uri: http://192.168.11.37/yangruiyi/springcloud-config.git  #https://github.com/yangry0917/springcloud-config.git #https://github.com/ityouknow/spring-cloud-examples    # 配置git仓库的地址
+          search-paths: demoConfig                         # git仓库地址下的相对地址，可以配置多个，用,分割。
+          username: #1021794070@qq.com                                            # git仓库的账号
+          password: #426547902341yry                                             # git仓库的密码
+          default-label: master
 
 eureka:
   client:
+    register-with-eureka: true
+    fetch-registry: true
     serviceUrl:
       defaultZone: http://peer1:8000/eureka/,http://peer2:8001/eureka/,http://peer3:8002/eureka/
+  instance:
+    prefer-ip-address: true
+  server:
+    # 关闭自我保护
+    enable-self-preservation: false
+
+

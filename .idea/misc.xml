@@ -10,8 +10,10 @@
         <option value="$PROJECT_DIR$/ribbon-server/pom.xml" />
         <option value="$PROJECT_DIR$/gateway-server/pom.xml" />
         <option value="$PROJECT_DIR$/eurekaconsumer/pom.xml" />
-        <option value="$PROJECT_DIR$/eureka-consumer/pom.xml" />
         <option value="$PROJECT_DIR$/hystrix-turbine/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-cloud-config-server/pom.xml" />
+        <option value="$PROJECT_DIR$/eureka-consumer/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-cloud-config-client/pom.xml" />
       </list>
     </option>
   </component>
