@@ -9,11 +9,31 @@ spring:
             discovery:
                 enabled: true
                 service-id: spring-cloud-config-server
+        bus:  #开启消息跟踪
+            trace:
+                enabled: true
+            id: ${spring.application.name}:${spring.cloud.config.profile}:${random.value}  #webhooks自动 /monitor 返回200没有刷新配置 方法二
     application:
         name: spring-cloud-config-client
+    rabbitmq:
+        host: localhost
+        port: 5672 #专门查询了下，rabbitmq 服务端口是5672，15672是其客户端插件的端口
+        username: root  #默认的guest用户因为安全问题是连接不上的
+        password: 123456
 eureka:
     client:
         service-url:
             defaultZone: http://peer1:8000/eureka/,http://peer2:8001/eureka/,http://peer3:8002/eureka/
 server:
     port: 8031
+
+##刷新时，关闭安全验证，来暴露所有端点   /actuator/bus-refresh
+management:
+    endpoints:
+        web:
+            exposure:
+                include: "*"
+#webhooks自动 /monitor 返回200没有刷新配置 方法一
+#vcap:
+#    application:
+#        instance_index: ${spring.cloud.config.profile}

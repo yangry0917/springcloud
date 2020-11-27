@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 
 @RestController
-//@RefreshScope
+@RefreshScope  //意使用配置时要加注解 @RefreshScope ,消息总线刷新时要用
 class HelloController {
     @Value("${neo.hello}")
     private String port;

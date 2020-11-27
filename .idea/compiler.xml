@@ -10,9 +10,9 @@
         <module name="spring-cloud-config-client" />
         <module name="eurekaconsumer" />
         <module name="eureka-client" />
-        <module name="eureka-server" />
-        <module name="eureka-consumer" />
         <module name="springcloud" />
+        <module name="eureka-consumer" />
+        <module name="eureka-server" />
         <module name="ribbon-server" />
         <module name="gateway-server" />
         <module name="spring-cloud-config-server" />

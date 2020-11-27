@@ -12,6 +12,11 @@ spring:
           username: #1021794070@qq.com                                            # git仓库的账号
           password: #426547902341yry                                             # git仓库的密码
           default-label: master
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: root
+    password: 123456
 
 eureka:
   client:
@@ -24,5 +29,13 @@ eureka:
   server:
     # 关闭自我保护
     enable-self-preservation: false
+
+#http://localhost:8030/actuator/bus-refresh
+management: # 暴露触发消息总线的地址
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
 
 
