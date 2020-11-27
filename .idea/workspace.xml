@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0d313edf-5559-494e-97d3-872947edbf4f" name="Default Changelist" comment="配置中心服务端">
+    <list default="true" id="0d313edf-5559-494e-97d3-872947edbf4f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/spring-cloud-config-client/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/spring-cloud-config-client/pom.xml" afterDir="false" />
@@ -282,11 +282,6 @@
               <path>
                 <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
                 <item name="Spring Boot" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-                <item name="Running" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-              </path>
-              <path>
-                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-                <item name="Spring Boot" type="7427dc5b:ServiceModel$ServiceGroupNode" />
                 <item name="Not Started" type="7427dc5b:ServiceModel$ServiceGroupNode" />
               </path>
             </expand>
@@ -318,7 +313,7 @@
       <workItem from="1606183451450" duration="34596000" />
       <workItem from="1606292308295" duration="3150000" />
       <workItem from="1606373687919" duration="112000" />
-      <workItem from="1606375858983" duration="15457000" />
+      <workItem from="1606375858983" duration="15717000" />
     </task>
     <task id="LOCAL-00001" summary="spring cloud hystrix dashboard添加；&#10;turbine功能添加">
       <created>1606180697259</created>
@@ -355,7 +350,14 @@
       <option name="project" value="LOCAL" />
       <updated>1606189194376</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="配置中心服务端，客户端自动读取改变的配置文件功能">
+      <created>1606449789631</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1606449789631</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -366,7 +368,8 @@
     <MESSAGE value="turbine功能添加" />
     <MESSAGE value="消费者功能改造" />
     <MESSAGE value="配置中心服务端" />
-    <option name="LAST_COMMIT_MESSAGE" value="配置中心服务端" />
+    <MESSAGE value="配置中心服务端，客户端自动读取改变的配置文件功能" />
+    <option name="LAST_COMMIT_MESSAGE" value="配置中心服务端，客户端自动读取改变的配置文件功能" />
   </component>
   <component name="WindowStateProjectService">
     <state x="590" y="15" key="#EurekaServerApplication8001" timestamp="1605604009100">
@@ -409,10 +412,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="690" y="279" key="#com.intellij.util.ui.classpath.ChooseLibrariesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1605662937754" />
-    <state x="531" y="113" key="CommitChangelistDialog2" timestamp="1606295560485">
+    <state x="531" y="113" key="CommitChangelistDialog2" timestamp="1606449787030">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="531" y="113" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1606295560485" />
+    <state x="531" y="113" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1606449787030" />
     <state x="184" y="86" key="DiffContextDialog" timestamp="1606374022677">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -481,10 +484,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="461" y="170" width="998" height="708" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1606440212028" />
-    <state x="552" y="241" key="Vcs.Push.Dialog.v2" timestamp="1606295531064">
+    <state x="552" y="241" key="Vcs.Push.Dialog.v2" timestamp="1606449800660">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="241" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1606295531064" />
+    <state x="552" y="241" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1606449800660" />
     <state x="92" y="92" width="1736" height="856" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1606439575689">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -497,10 +500,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="567" y="220" width="786" height="600" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1606183353999" />
-    <state x="722" y="232" key="git4idea.branch.GitSmartOperationDialog" timestamp="1606374027024">
+    <state x="722" y="232" key="git4idea.branch.GitSmartOperationDialog" timestamp="1606449831519">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="722" y="232" key="git4idea.branch.GitSmartOperationDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1606374027024" />
+    <state x="722" y="232" key="git4idea.branch.GitSmartOperationDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1606449831519" />
     <state x="601" y="238" key="new project wizard" timestamp="1606188740677">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
