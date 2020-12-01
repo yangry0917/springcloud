@@ -8,10 +8,10 @@
         <version>2.4.0</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
-    <groupId>com.cloud.zuulserver</groupId>
+    <groupId>com.cloud.gatewayserver</groupId>
     <artifactId>demo</artifactId>
     <version>0.0.1</version>
-    <name>zullserver</name>
+    <name>gatewayserver</name>
     <description>Demo project for Spring Boot</description>
 
     <properties>
@@ -30,7 +30,7 @@
             <artifactId>spring-cloud-starter-netflix-hystrix</artifactId>
             <version>2.2.6.RELEASE</version>
         </dependency>
-        <!--若没有这个依赖，会一直报：Unable to find GatewayFilterFactory with name Hystrix-->
+        <!--若没有这个依赖，会一直报：Unable to find GatewayFilterFactory with name Hystrix ；限速在高并发场景中比较常用的手段之一，可以有效的保障服务的整体稳定性-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-redis-reactive</artifactId>
@@ -48,6 +48,14 @@
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
         </dependency>
+        <!--引入的zipkin依赖 spring-cloud-sleuth-zipkin + spring-cloud-starter-sleuth 就相当于直接引入 spring-cloud-starter-zipkin-->
+        <!-- https://mvnrepository.com/artifact/org.springframework.cloud/spring-cloud-starter-zipkin -->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-zipkin</artifactId>
+            <version>2.2.6.RELEASE</version>
+        </dependency>
+
 
         <dependency>
             <groupId>org.springframework.boot</groupId>

@@ -10,16 +10,18 @@
         <module name="spring-cloud-config-client" />
         <module name="eurekaconsumer" />
         <module name="eureka-client" />
-        <module name="springcloud" />
+        <module name="zipkin-server" />
         <module name="eureka-consumer" />
-        <module name="eureka-server" />
+        <module name="springcloud" />
         <module name="ribbon-server" />
-        <module name="gateway-server" />
         <module name="spring-cloud-config-server" />
+        <module name="gateway-server" />
+        <module name="eureka-server" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="eurekaconsumer" target="1.8" />
+      <module name="zipkin-server" target="1.8" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
@@ -33,6 +35,7 @@
       <module name="ribbon-server" options="-parameters" />
       <module name="spring-cloud-config-client" options="-parameters" />
       <module name="spring-cloud-config-server" options="-parameters" />
+      <module name="zipkin-server" options="-parameters" />
     </option>
   </component>
 </project>

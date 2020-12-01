@@ -5,6 +5,14 @@ spring:
     name: eureka-client
   #虽然配置文件名叫application-peer1,但profiles不是peer1,而是 provider-8891
   profiles: provider-8891
+  zipkin:
+    base-url: http://localhost:9411
+  sleuth:
+    sampler:
+      probability: 1.0
+    web:
+      client:
+        enabled: true
 eureka:
   client:
     serviceUrl:

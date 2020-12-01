@@ -10,27 +10,37 @@ spring:
     name: gateway-client
   cloud:
     gateway:
-      routes:
-        - id: host_route
-          uri: ${test.uri}
-          predicates:
-            - Path=/client/**
+      #routes:
+      #  - id: host_route
+      #    uri: ${test.uri}
+      #    predicates:
+      #      - Path=/client/**
 
-        - id: test_route
-          uri: ${test2.uri}
-          predicates:
-            - Path=/spring-cloud/**
+      #  - id: test_route
+      #    uri: ${test2.uri}
+      #    predicates:
+      #      - Path=/spring-cloud/**
+      discovery: #是否与服务发现组件进行结合，通过 serviceId 转发到具体的服务实例。默认为false，设为true便开启通过服务中心的自动根据 serviceId 创建路由的功能。
+        locator: #路由访问方式：http://Gateway_HOST:Gateway_PORT/大写的serviceId/**，其中微服务应用名默认大写访问。
+          enabled: true
+          lower-case-service-id: true #不必非要用大写service_id去访问 例：  http://localhost:8899/eureka-client/client/hello
+  sleuth:
+    sampler:
+      probability: 1.0
+  zipkin:
+    base-url: http://localhost:9411
 
 
 logging:
   level:
-    org.springframework.cloud.gateway: TRACE
+    org.springframework.cloud.gateway: debug
     org.springframework.http.server.reactive: DEBUG
     org.springframework.web.reactive: DEBUG
     reacotr.ipc.netty: DEBUG
 eureka:
   client:
     service-url:
-      defaultZone: http://localhost:8890/eureka
+      defaultZone: http://peer1:8000/eureka/,http://peer2:8001/eureka/,http://peer3:8002/eureka/
   instance:
     prefer-ip-address: true
+

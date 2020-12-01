@@ -2,13 +2,28 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0d313edf-5559-494e-97d3-872947edbf4f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/zipkin-server/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zipkin-server/.mvn/wrapper/MavenWrapperDownloader.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zipkin-server/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zipkin-server/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zipkin-server/mvnw" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zipkin-server/mvnw.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zipkin-server/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zipkin-server/src/main/java/com/cloud/zipkinserver/ZipkinServerApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zipkin-server/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zipkin-server/src/test/java/com/cloud/zipkinserver/ZipkinServerApplicationTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring-cloud-config-client/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/spring-cloud-config-client/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring-cloud-config-client/src/main/java/com/cloud/springcloudconfigclient/test/HelloController.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring-cloud-config-client/src/main/java/com/cloud/springcloudconfigclient/test/HelloController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring-cloud-config-client/src/main/resources/bootstrap.yml" beforeDir="false" afterPath="$PROJECT_DIR$/spring-cloud-config-client/src/main/resources/bootstrap.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring-cloud-config-server/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/spring-cloud-config-server/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring-cloud-config-server/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/spring-cloud-config-server/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eureka-client/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/eureka-client/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eureka-client/src/main/resources/application-peer1.yml" beforeDir="false" afterPath="$PROJECT_DIR$/eureka-client/src/main/resources/application-peer1.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eureka-client/src/main/resources/application-peer2.yml" beforeDir="false" afterPath="$PROJECT_DIR$/eureka-client/src/main/resources/application-peer2.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eureka-consumer/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/eureka-consumer/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eureka-consumer/src/main/resources/application-consumer8003.yml" beforeDir="false" afterPath="$PROJECT_DIR$/eureka-consumer/src/main/resources/application-consumer8003.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eureka-consumer/src/main/resources/application-consumer8004.yml" beforeDir="false" afterPath="$PROJECT_DIR$/eureka-consumer/src/main/resources/application-consumer8004.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway-server/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/gateway-server/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway-server/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/gateway-server/src/main/resources/application.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,6 +45,7 @@
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="MERGE" />
   </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
@@ -89,7 +105,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.SpringCloudConfigClientApplication">
+  <component name="RunManager" selected="Spring Boot.ZipkinServerApplication">
     <configuration name="GatewayServerApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.cloud.gatewayserver.GatewayServerApplication" />
       <module name="gateway-server" />
@@ -240,10 +256,16 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="ZipkinServerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="zipkin-server" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.cloud.zipkinserver.ZipkinServerApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
       <item itemvalue="Application.GatewayServerApplication" />
       <item itemvalue="JUnit.All in eureka-consumer" />
-      <item itemvalue="Spring Boot.SpringCloudConfigClientApplication" />
       <item itemvalue="Spring Boot.SpringCloudConfigServerApplication" />
       <item itemvalue="Spring Boot.EurekaConsumer8003Application" />
       <item itemvalue="Spring Boot.EurekaConsumer8004Application" />
@@ -257,6 +279,8 @@
       <item itemvalue="Spring Boot.EurekaClient2Application8892" />
       <item itemvalue="Spring Boot.RibbonServerApplication" />
       <item itemvalue="Spring Boot.HystrixTurbineApplication" />
+      <item itemvalue="Spring Boot.SpringCloudConfigClientApplication" />
+      <item itemvalue="Spring Boot.ZipkinServerApplication" />
     </list>
     <recent_temporary>
       <list>
@@ -264,7 +288,6 @@
         <item itemvalue="Application.GatewayServerApplication" />
         <item itemvalue="JUnit.All in eureka-consumer" />
         <item itemvalue="Application.GatewayServerApplication" />
-        <item itemvalue="JUnit.All in eureka-consumer" />
       </list>
     </recent_temporary>
   </component>
@@ -272,12 +295,22 @@
     <option name="viewStates">
       <list>
         <serviceView>
-          <option name="contentProportion" value="0.22564936" />
+          <option name="contentProportion" value="0.20508657" />
           <treeState>
             <expand>
               <path>
                 <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
                 <item name="Spring Boot" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              </path>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="Spring Boot" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+                <item name="Failed" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              </path>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="Spring Boot" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+                <item name="Finished" type="7427dc5b:ServiceModel$ServiceGroupNode" />
               </path>
               <path>
                 <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
@@ -313,7 +346,7 @@
       <workItem from="1606183451450" duration="34596000" />
       <workItem from="1606292308295" duration="3150000" />
       <workItem from="1606373687919" duration="112000" />
-      <workItem from="1606375858983" duration="15717000" />
+      <workItem from="1606459736203" duration="21518000" />
     </task>
     <task id="LOCAL-00001" summary="spring cloud hystrix dashboard添加；&#10;turbine功能添加">
       <created>1606180697259</created>
@@ -350,26 +383,31 @@
       <option name="project" value="LOCAL" />
       <updated>1606189194376</updated>
     </task>
-    <task id="LOCAL-00006" summary="配置中心服务端，客户端自动读取改变的配置文件功能">
-      <created>1606449789631</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1606449789631</updated>
-    </task>
-    <option name="localTasksCounter" value="7" />
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="spring cloud hystrix dashboard添加；&#10;turbine功能添加" />
     <MESSAGE value="turbine功能添加" />
     <MESSAGE value="消费者功能改造" />
     <MESSAGE value="配置中心服务端" />
-    <MESSAGE value="配置中心服务端，客户端自动读取改变的配置文件功能" />
-    <option name="LAST_COMMIT_MESSAGE" value="配置中心服务端，客户端自动读取改变的配置文件功能" />
+    <option name="LAST_COMMIT_MESSAGE" value="配置中心服务端" />
   </component>
   <component name="WindowStateProjectService">
     <state x="590" y="15" key="#EurekaServerApplication8001" timestamp="1605604009100">
@@ -384,10 +422,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="552" y="178" key="#Project_Structure/0.0.1920.1040@0.0.1920.1040" timestamp="1606373784909" />
-    <state x="527" y="246" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1606376723894">
+    <state x="527" y="246" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1606183974661">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="527" y="246" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1606376723894" />
+    <state x="527" y="246" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1606183974661" />
     <state x="765" y="229" key="#com.intellij.ide.util.MemberChooser" timestamp="1605854927884">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -412,10 +450,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="690" y="279" key="#com.intellij.util.ui.classpath.ChooseLibrariesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1605662937754" />
-    <state x="531" y="113" key="CommitChangelistDialog2" timestamp="1606449787030">
+    <state x="531" y="113" key="CommitChangelistDialog2" timestamp="1606785310180">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="531" y="113" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1606449787030" />
+    <state x="531" y="113" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1606785310180" />
     <state x="184" y="86" key="DiffContextDialog" timestamp="1606374022677">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -424,90 +462,98 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="739" y="261" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1606184004023" />
-    <state width="1430" height="321" key="GridCell.Tab.0.bottom" timestamp="1606449559737">
+    <state width="1468" height="388" key="GridCell.Tab.0.bottom" timestamp="1606785484615">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1430" height="321" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1606449559737" />
-    <state width="1430" height="321" key="GridCell.Tab.0.center" timestamp="1606449559737">
+    <state width="1468" height="388" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1606785484615" />
+    <state width="1468" height="388" key="GridCell.Tab.0.center" timestamp="1606785484615">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1430" height="321" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1606449559737" />
-    <state width="1430" height="321" key="GridCell.Tab.0.left" timestamp="1606449559737">
+    <state width="1468" height="388" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1606785484615" />
+    <state width="1468" height="388" key="GridCell.Tab.0.left" timestamp="1606785484615">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1430" height="321" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1606449559737" />
-    <state width="1430" height="321" key="GridCell.Tab.0.right" timestamp="1606449559737">
+    <state width="1468" height="388" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1606785484615" />
+    <state width="1468" height="388" key="GridCell.Tab.0.right" timestamp="1606785484615">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1430" height="321" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1606449559737" />
-    <state width="1430" height="321" key="GridCell.Tab.1.bottom" timestamp="1606449559738">
+    <state width="1468" height="388" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1606785484615" />
+    <state width="1468" height="388" key="GridCell.Tab.1.bottom" timestamp="1606785484615">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1430" height="321" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1606449559738" />
-    <state width="1430" height="321" key="GridCell.Tab.1.center" timestamp="1606449559738">
+    <state width="1468" height="388" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1606785484615" />
+    <state width="1468" height="388" key="GridCell.Tab.1.center" timestamp="1606785484615">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1430" height="321" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1606449559738" />
-    <state width="1430" height="321" key="GridCell.Tab.1.left" timestamp="1606449559738">
+    <state width="1468" height="388" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1606785484615" />
+    <state width="1468" height="388" key="GridCell.Tab.1.left" timestamp="1606785484615">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1430" height="321" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1606449559738" />
-    <state width="1430" height="321" key="GridCell.Tab.1.right" timestamp="1606449559738">
+    <state width="1468" height="388" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1606785484615" />
+    <state width="1468" height="388" key="GridCell.Tab.1.right" timestamp="1606785484615">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1430" height="321" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1606449559738" />
-    <state width="1430" height="321" key="GridCell.Tab.2.bottom" timestamp="1606449559738">
+    <state width="1468" height="388" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1606785484615" />
+    <state width="1468" height="388" key="GridCell.Tab.2.bottom" timestamp="1606785484615">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1430" height="321" key="GridCell.Tab.2.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1606449559738" />
-    <state width="1430" height="321" key="GridCell.Tab.2.center" timestamp="1606449559738">
+    <state width="1468" height="388" key="GridCell.Tab.2.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1606785484615" />
+    <state width="1468" height="388" key="GridCell.Tab.2.center" timestamp="1606785484615">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1430" height="321" key="GridCell.Tab.2.center/0.0.1920.1040@0.0.1920.1040" timestamp="1606449559738" />
-    <state width="1430" height="321" key="GridCell.Tab.2.left" timestamp="1606449559738">
+    <state width="1468" height="388" key="GridCell.Tab.2.center/0.0.1920.1040@0.0.1920.1040" timestamp="1606785484615" />
+    <state width="1468" height="388" key="GridCell.Tab.2.left" timestamp="1606785484615">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1430" height="321" key="GridCell.Tab.2.left/0.0.1920.1040@0.0.1920.1040" timestamp="1606449559738" />
-    <state width="1430" height="321" key="GridCell.Tab.2.right" timestamp="1606449559738">
+    <state width="1468" height="388" key="GridCell.Tab.2.left/0.0.1920.1040@0.0.1920.1040" timestamp="1606785484615" />
+    <state width="1468" height="388" key="GridCell.Tab.2.right" timestamp="1606785484615">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1430" height="321" key="GridCell.Tab.2.right/0.0.1920.1040@0.0.1920.1040" timestamp="1606449559738" />
-    <state x="490" y="175" key="Maven.ArtifactSearchDialog" timestamp="1605839786270">
+    <state width="1468" height="388" key="GridCell.Tab.2.right/0.0.1920.1040@0.0.1920.1040" timestamp="1606785484615" />
+    <state x="490" y="175" key="Maven.ArtifactSearchDialog" timestamp="1606724351259">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="490" y="175" key="Maven.ArtifactSearchDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1605839786270" />
+    <state x="490" y="175" key="Maven.ArtifactSearchDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1606724351259" />
+    <state x="669" y="235" key="MultipleFileMergeDialog" timestamp="1606449910141">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="669" y="235" key="MultipleFileMergeDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1606449910141" />
     <state x="694" y="230" key="RollbackChangesDialog" timestamp="1606209163098">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="694" y="230" key="RollbackChangesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1606209163098" />
-    <state x="461" y="170" width="998" height="708" key="SettingsEditor" timestamp="1606440212028">
+    <state x="461" y="170" width="998" height="708" key="SettingsEditor" timestamp="1606706098624">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="461" y="170" width="998" height="708" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1606440212028" />
-    <state x="552" y="241" key="Vcs.Push.Dialog.v2" timestamp="1606449800660">
+    <state x="461" y="170" width="998" height="708" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1606706098624" />
+    <state x="552" y="241" key="Vcs.Push.Dialog.v2" timestamp="1606449974608">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="241" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1606449800660" />
-    <state x="92" y="92" width="1736" height="856" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1606439575689">
+    <state x="552" y="241" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1606449974608" />
+    <state x="92" y="92" width="1736" height="856" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1606208372923">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="92" y="92" width="1736" height="856" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1606439575689" />
-    <state x="640" y="344" key="com.intellij.ide.util.TipDialog" timestamp="1606375859336">
+    <state x="92" y="92" width="1736" height="856" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1606208372923" />
+    <state x="640" y="344" key="com.intellij.ide.util.TipDialog" timestamp="1606459744535">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="640" y="344" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1606375859336" />
+    <state x="640" y="344" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1606459744535" />
+    <state x="752" y="437" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1606449878626">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="752" y="437" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1606449878626" />
     <state x="567" y="220" width="786" height="600" key="find.popup" timestamp="1606183353999">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="567" y="220" width="786" height="600" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1606183353999" />
-    <state x="722" y="232" key="git4idea.branch.GitSmartOperationDialog" timestamp="1606449831519">
+    <state x="722" y="232" key="git4idea.branch.GitSmartOperationDialog" timestamp="1606449895881">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="722" y="232" key="git4idea.branch.GitSmartOperationDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1606449831519" />
-    <state x="601" y="238" key="new project wizard" timestamp="1606188740677">
+    <state x="722" y="232" key="git4idea.branch.GitSmartOperationDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1606449895881" />
+    <state x="601" y="238" key="new project wizard" timestamp="1606706069238">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="601" y="238" key="new project wizard/0.0.1920.1040@0.0.1920.1040" timestamp="1606188740677" />
+    <state x="601" y="238" key="new project wizard/0.0.1920.1040@0.0.1920.1040" timestamp="1606706069238" />
     <state x="616" y="240" key="run.anything.popup" timestamp="1606118319106">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
