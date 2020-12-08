@@ -9,9 +9,9 @@ eureka:
     hostname: peer2
   client:
     #指定是否要注册到注册中心（
-    #register-with-eureka: false
+    register-with-eureka: false
     #指定是否要从注册中心获取服务
-    #fetch-registry: false
+    fetch-registry: false
     #双节点注册中心，serviceUrl指向peer1
     service-url:
       default-zone: http://peer1:8000/eureka/,http://peer3:8002/eureka/
