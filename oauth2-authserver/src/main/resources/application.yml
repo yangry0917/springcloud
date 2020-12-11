@@ -1,0 +1,35 @@
+server:
+  port: 8050
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://peer1:8000/eureka/,http://peer2:8001/eureka/,http://peer3:8002/eureka/
+
+spring:
+  application:
+    name: oauth2-authserver
+  #链路服务的地址
+  zipkin:
+    base-url: http://localhost:9411
+  #被追踪的可能性，默认是0.1 表示百分之10
+  sleuth:
+    sampler:
+      probability: 1.0
+    web:
+      client:
+        enabled: true
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/springcloud?autoReconnect=true&useSSL=false&useUnicode=true&characterEncoding=utf-8
+    password: root
+    username: root
+
+feign:
+  hystrix:
+    enabled: true
+  client:
+    config:
+      default:
+        connectTimeout: 5000
+        readTimeout: 30000

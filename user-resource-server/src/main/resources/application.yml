@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: user-resource-server
+  #链路服务的地址
+  zipkin:
+    base-url: http://localhost:9411
+  #被追踪的可能性，默认是0.1 表示百分之10
+  sleuth:
+    sampler:
+      probability: 1.0
+    web:
+      client:
+        enabled: true
+
+server:
+  port: 8060
+
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://peer1:8000/eureka/,http://peer2:8001/eureka/,http://peer3:8002/eureka/

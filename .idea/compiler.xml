@@ -6,17 +6,19 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="hystrix-turbine" />
-        <module name="spring-cloud-config-client" />
-        <module name="eurekaconsumer" />
-        <module name="eureka-client" />
-        <module name="zipkin-server" />
-        <module name="eureka-consumer" />
-        <module name="springcloud" />
-        <module name="ribbon-server" />
-        <module name="spring-cloud-config-server" />
         <module name="gateway-server" />
+        <module name="spring-cloud-config-server" />
+        <module name="eurekaconsumer" />
+        <module name="user-resource-server" />
+        <module name="eureka-client" />
+        <module name="spring-cloud-config-client" />
+        <module name="ribbon-server" />
+        <module name="zipkin-server" />
         <module name="eureka-server" />
+        <module name="common-utils" />
+        <module name="hystrix-turbine" />
+        <module name="oauth2-authserver" />
+        <module name="eureka-consumer" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -32,9 +34,11 @@
       <module name="eurekaconsumer" options="-parameters" />
       <module name="gateway-server" options="-parameters" />
       <module name="hystrix-turbine" options="-parameters" />
+      <module name="oauth2-authserver" options="-parameters" />
       <module name="ribbon-server" options="-parameters" />
       <module name="spring-cloud-config-client" options="-parameters" />
       <module name="spring-cloud-config-server" options="-parameters" />
+      <module name="user-resource-server" options="-parameters" />
       <module name="zipkin-server" options="-parameters" />
     </option>
   </component>
