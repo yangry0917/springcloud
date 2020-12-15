@@ -3,7 +3,7 @@ package com.cloud.oauth2authserver.service;
 
 import com.cloud.oauth2authserver.service.hystrix.UserServiceFallbackImpl;
 
-import model.request.QQUserQuery;
+import model.request.UserQuery;
 import model.response.ResponseResult;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -18,8 +18,8 @@ public interface UserService {
     /**
      * 调用USER-RESOURCE-SERVER微服务的getQQUserAuth接口查询用户信息
      */
-    @PostMapping("/getQQUserAuth")
-    ResponseResult getQQUserAuth(@RequestBody QQUserQuery query);
+    @PostMapping("/getUserAuth")
+    ResponseResult getUserAuth(@RequestBody UserQuery query);
 
 
 }

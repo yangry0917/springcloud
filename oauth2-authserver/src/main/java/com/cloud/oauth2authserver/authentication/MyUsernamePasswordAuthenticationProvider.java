@@ -33,7 +33,7 @@ public class MyUsernamePasswordAuthenticationProvider implements AuthenticationP
         UserDetails user = userDetailsServiceImpl.loadUserByUsername((String)(authenticationToken.getPrincipal()));
         if(user == null ){
             throw new InternalAuthenticationServiceException("MyUsernamePasswordAuthenticationProvider获取认证用户信息失败");
-        }else if(!this.passwordEncoder.matches((CharSequence) authenticationToken.getCredentials(), user.getPassword())){
+        }else if(!this.passwordEncoder.matches(((CharSequence) authenticationToken.getCredentials()), user.getPassword())){
             throw new BadCredentialsException("用户名或密码不正确");
         }
         /**

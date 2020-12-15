@@ -1,5 +1,6 @@
 package com.cloud.oauth2authserver.config;
 
+import com.cloud.oauth2authserver.constant.ConfigConstant;
 import com.cloud.oauth2authserver.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
@@ -24,6 +25,8 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     @Autowired
     UserDetailsService userDetailsServiceImpl;
 
+    @Autowired
+    private MyUsernamePasswordAuthenticationConfig myUsernamePasswordAuthenticationConfig;
     /**
      * 用户认证配置
      */
@@ -46,12 +49,15 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
         http
                 .csrf()
                 .disable()
+                .apply(myUsernamePasswordAuthenticationConfig)
+                .and()
                 .formLogin()
                 .permitAll()
                 .and()
                 .authorizeRequests()
                 .anyRequest()
                 .authenticated();
+
     }
 
     @Bean

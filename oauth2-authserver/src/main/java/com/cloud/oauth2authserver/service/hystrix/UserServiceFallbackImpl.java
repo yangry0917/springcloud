@@ -1,7 +1,7 @@
 package com.cloud.oauth2authserver.service.hystrix;
 
 import com.cloud.oauth2authserver.service.UserService;
-import model.request.QQUserQuery;
+import model.request.UserQuery;
 import model.response.ResponseResult;
 import org.springframework.stereotype.Service;
 
@@ -11,10 +11,10 @@ import org.springframework.stereotype.Service;
 @Service
 public class UserServiceFallbackImpl implements UserService {
 
+
     @Override
-    public ResponseResult getQQUserAuth(QQUserQuery query) {
+    public ResponseResult getUserAuth(UserQuery query) {
         System.out.println("这里进行相应的记录");
         return null;
     }
-
 }

@@ -39,7 +39,7 @@ public class MyUsernamePasswordAuthenticationConfig extends SecurityConfigurerAd
         /**
          * 自定义用户认证处理逻辑时，需要指定RememberMeServices，否则自定义用户认证的"记住我"功能异常
          */
-        authenticationFilter.setRememberMeServices(http.getSharedObject(RememberMeServices.class));
+        //authenticationFilter.setRememberMeServices(http.getSharedObject(RememberMeServices.class));
 
         /**
          * 指定自定义的认证成功和失败的处理器

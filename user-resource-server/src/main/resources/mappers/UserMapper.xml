@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.cloud.oauth2resourceserver.dao.UserMapper">
+
+
+    <resultMap id="BaseResultMap" type="model.domain.User">
+        <id column="userId" property="id" jdbcType="BIGINT"/> <!--注意BIGINT严格区分大小写-->
+        <result column="username" property="username" jdbcType="VARCHAR"/>
+        <result column="password" property="password" jdbcType="VARCHAR"/>
+        <collection property="roles" ofType="model.domain.Role">
+            <result column="roleId" property="id"/>
+            <result column="roleName" property="name"/>
+        </collection>
+    </resultMap>
+
+    <sql id="selectUserVo">
+        id,user_name,sex,login_name,pwd,enable,unit_id,remark
+    </sql>
+
+    <select id="loadUserByUsername" resultMap="BaseResultMap">
+        SELECT
+            u.id userId,
+            u.username,
+            u. PASSWORD,
+            ur.user_id,
+            ur.role_id,
+            r.id roleId,
+            r. NAME roleName
+        FROM
+            USER u
+        LEFT JOIN user_role ur ON u.id = ur.user_id
+        LEFT JOIN role r ON ur.role_id = r.id
+        WHERE
+            u.username = #{username}
+    </select>
+
+    <select id="test" resultType="int">
+        select 1
+    </select>
+</mapper>

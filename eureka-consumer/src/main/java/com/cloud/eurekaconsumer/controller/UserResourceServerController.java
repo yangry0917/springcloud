@@ -1,13 +1,11 @@
 package com.cloud.eurekaconsumer.controller;
 
 
-import com.cloud.eurekaconsumer.service.HelloRemoteService;
 import com.cloud.eurekaconsumer.service.UserResourceServerService;
 import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
-import model.request.QQUserQuery;
+import model.request.UserQuery;
 import model.response.ResponseResult;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -19,10 +17,10 @@ public class UserResourceServerController {
 
 
     @HystrixCommand(fallbackMethod = "serviceFallback")
-    @RequestMapping("/getQQUserAuth")
+    @RequestMapping("/getUserAuth")
     public String index() {
-        QQUserQuery qqUserQuery = new QQUserQuery();
-        ResponseResult responseResult = userResourceServerService.getQQUserAuth(qqUserQuery);
+        UserQuery qqUserQuery = new UserQuery();
+        ResponseResult responseResult = userResourceServerService.getUserAuth(qqUserQuery);
         return responseResult.toString();
     }
 

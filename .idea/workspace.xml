@@ -2,14 +2,38 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0d313edf-5559-494e-97d3-872947edbf4f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/common-utils/src/main/java/model/domain/Role.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-utils/target/classes/model/domain/Role.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-utils/target/classes/model/domain/User.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-utils/target/classes/model/request/UserQuery.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user-resource-server/src/main/java/com/cloud/oauth2resourceserver/dao/UserMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user-resource-server/src/main/resources/mappers/UserMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/eureka-consumer/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/eureka-consumer/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/eureka-consumer/src/main/java/com/cloud/springcloudconfigserver/SpringCloudConfigServerApplication.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gateway-server/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/gateway-server/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common-utils/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/common-utils/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common-utils/src/main/java/model/domain/QQUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/common-utils/src/main/java/model/domain/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common-utils/src/main/java/model/ext/QQUserAuth.java" beforeDir="false" afterPath="$PROJECT_DIR$/common-utils/src/main/java/model/ext/UserAuth.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common-utils/src/main/java/model/request/QQUserQuery.java" beforeDir="false" afterPath="$PROJECT_DIR$/common-utils/src/main/java/model/request/UserQuery.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common-utils/target/classes/model/domain/QQUser.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/common-utils/target/classes/model/ext/QQUserAuth.class" beforeDir="false" afterPath="$PROJECT_DIR$/common-utils/target/classes/model/ext/UserAuth.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common-utils/target/classes/model/request/QQUserQuery.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eureka-consumer/src/main/java/com/cloud/eurekaconsumer/controller/UserResourceServerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/eureka-consumer/src/main/java/com/cloud/eurekaconsumer/controller/UserResourceServerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eureka-consumer/src/main/java/com/cloud/eurekaconsumer/service/UserResourceServerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/eureka-consumer/src/main/java/com/cloud/eurekaconsumer/service/UserResourceServerService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/oauth2-authserver/src/main/java/com/cloud/oauth2authserver/authentication/MyUsernamePasswordAuthenticationProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/oauth2-authserver/src/main/java/com/cloud/oauth2authserver/authentication/MyUsernamePasswordAuthenticationProvider.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/oauth2-authserver/src/main/java/com/cloud/oauth2authserver/config/MyUsernamePasswordAuthenticationConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/oauth2-authserver/src/main/java/com/cloud/oauth2authserver/config/MyUsernamePasswordAuthenticationConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/oauth2-authserver/src/main/java/com/cloud/oauth2authserver/config/WebSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/oauth2-authserver/src/main/java/com/cloud/oauth2authserver/config/WebSecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/oauth2-authserver/src/main/java/com/cloud/oauth2authserver/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/oauth2-authserver/src/main/java/com/cloud/oauth2authserver/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/oauth2-authserver/src/main/java/com/cloud/oauth2authserver/service/hystrix/UserServiceFallbackImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/oauth2-authserver/src/main/java/com/cloud/oauth2authserver/service/hystrix/UserServiceFallbackImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/oauth2-authserver/src/main/java/com/cloud/oauth2authserver/service/impl/UserDetailsServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/oauth2-authserver/src/main/java/com/cloud/oauth2authserver/service/impl/UserDetailsServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/oauth2-authserver/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/oauth2-authserver/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-resource-server/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/user-resource-server/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-resource-server/src/main/java/com/cloud/oauth2resourceserver/Oauth2ResourceServerApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-resource-server/src/main/java/com/cloud/oauth2resourceserver/Oauth2ResourceServerApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-resource-server/src/main/java/com/cloud/oauth2resourceserver/config/ResourceServerConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-resource-server/src/main/java/com/cloud/oauth2resourceserver/config/ResourceServerConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-resource-server/src/main/java/com/cloud/oauth2resourceserver/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-resource-server/src/main/java/com/cloud/oauth2resourceserver/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-resource-server/src/main/java/com/cloud/oauth2resourceserver/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-resource-server/src/main/java/com/cloud/oauth2resourceserver/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-resource-server/src/main/java/com/cloud/oauth2resourceserver/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-resource-server/src/main/java/com/cloud/oauth2resourceserver/service/impl/UserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-resource-server/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/user-resource-server/src/main/resources/application.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,11 +86,11 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../internationalbusiness_server" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/user-resource-server/src/main/resources/mappers" />
+    <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.34167895" />
-    <property name="settings.editor.selected.configurable" value="MavenSettings" />
+    <property name="settings.editor.selected.configurable" value="preferences.general" />
   </component>
   <component name="ReactorSettings">
     <option name="debugInitializationType" value="AGENT" />
@@ -74,18 +98,18 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="model.domain" />
+      <recent name="com.cloud.oauth2resourceserver.entity" />
+      <recent name="com.cloud.oauth2resourceserver.mapper" />
       <recent name="com.cloud.eurekaconsumer.controller" />
       <recent name="com.cloud.eurekaconsumer.service" />
-      <recent name="com.cloud.oauth2authserver.constant" />
-      <recent name="utils" />
-      <recent name="com.cloud.oauth2authserver.entity" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\jkProjects\springcloud\user-resource-server\src\main\resources\mappers" />
       <recent name="F:\jkProjects\springcloud\common-utils\src\main\java" />
       <recent name="F:\IdeaProjects\springcloud\spring-cloud-config-client\src\main\resources" />
       <recent name="F:\IdeaProjects\springcloud\spring-cloud-config-server\src\main\resources" />
       <recent name="F:\IdeaProjects\springcloud\eureka-consumer\src\main\resources" />
-      <recent name="F:\IdeaProjects\springcloud\eureka-consumer\src\main\java\com\cloud\eurekaconsumer\controller" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -95,7 +119,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.Oauth2Resourceserver8060Application">
+  <component name="RunManager" selected="Spring Boot.EurekaClientApplication8892">
     <configuration name="GatewayServerApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.cloud.gatewayserver.GatewayServerApplication" />
       <module name="gateway-server" />
@@ -117,17 +141,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="EurekaClient2Application8892" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
-      <module name="eureka-client" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.cloud.eurekaclient.EurekaClientApplication" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <envs>
-        <env name="spring.profiles.active" value="provider-8892" />
-      </envs>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="EurekaClientApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="eureka-client" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.cloud.eurekaclient.EurekaClientApplication" />
@@ -142,6 +155,17 @@
       <option name="ALTERNATIVE_JRE_PATH" />
       <envs>
         <env name="spring.profiles.active" value="provider-8891" />
+      </envs>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="EurekaClientApplication8892" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="eureka-client" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.cloud.eurekaclient.EurekaClientApplication" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <envs>
+        <env name="spring.profiles.active" value="provider-8892" />
       </envs>
       <method v="2">
         <option name="Make" enabled="true" />
@@ -278,7 +302,7 @@
       <item itemvalue="Spring Boot.EurekaServerApplication" />
       <item itemvalue="Spring Boot.EurekaServerApplication8001" />
       <item itemvalue="Spring Boot.EurekaClientApplication8891" />
-      <item itemvalue="Spring Boot.EurekaClient2Application8892" />
+      <item itemvalue="Spring Boot.EurekaClientApplication8892" />
       <item itemvalue="Spring Boot.RibbonServerApplication" />
       <item itemvalue="Spring Boot.HystrixTurbineApplication" />
       <item itemvalue="Spring Boot.SpringCloudConfigClientApplication" />
@@ -308,7 +332,7 @@
               <path>
                 <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
                 <item name="Spring Boot" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-                <item name="Running" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+                <item name="Finished" type="7427dc5b:ServiceModel$ServiceGroupNode" />
               </path>
               <path>
                 <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
@@ -348,6 +372,7 @@
       <workItem from="1606898417725" duration="13217000" />
       <workItem from="1607392036016" duration="39733000" />
       <workItem from="1607565155610" duration="28916000" />
+      <workItem from="1607907420872" duration="25826000" />
     </task>
     <task id="LOCAL-00001" summary="spring cloud hystrix dashboard添加；&#10;turbine功能添加">
       <created>1606180697259</created>
@@ -439,14 +464,14 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="552" y="178" key="#Project_Structure/0.0.1920.1040@0.0.1920.1040" timestamp="1607392068380" />
-    <state x="527" y="246" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1607655626072">
+    <state x="527" y="246" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1607918045931">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="527" y="246" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1607655626072" />
-    <state x="765" y="229" width="604" height="568" key="#com.intellij.ide.util.MemberChooser" timestamp="1607582443503">
+    <state x="527" y="246" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1607918045931" />
+    <state x="765" y="229" width="604" height="568" key="#com.intellij.ide.util.MemberChooser" timestamp="1607916316971">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="765" y="229" width="604" height="568" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1607582443503" />
+    <state x="765" y="229" width="604" height="568" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1607916316971" />
     <state x="802" y="374" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1606881973516">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -463,14 +488,14 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="723" y="378" width="497" height="292" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1920.1040@0.0.1920.1040" timestamp="1605839971948" />
-    <state x="883" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1607673774341">
+    <state x="883" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1607909086996">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="883" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1607673774341" />
-    <state x="690" y="266" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1607501297600">
+    <state x="883" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1607909086996" />
+    <state x="690" y="266" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1607909625649">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="690" y="266" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1607501297600" />
+    <state x="690" y="266" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1607909625649" />
     <state x="690" y="279" key="#com.intellij.util.ui.classpath.ChooseLibrariesDialog" timestamp="1605662937754">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -487,54 +512,54 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="739" y="261" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1607659610156" />
-    <state width="1387" height="496" key="GridCell.Tab.0.bottom" timestamp="1607679440074">
+    <state width="1387" height="324" key="GridCell.Tab.0.bottom" timestamp="1608023704855">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1387" height="496" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1607679440074" />
-    <state width="1387" height="496" key="GridCell.Tab.0.center" timestamp="1607679440074">
+    <state width="1387" height="324" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1608023704855" />
+    <state width="1387" height="324" key="GridCell.Tab.0.center" timestamp="1608023704855">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1387" height="496" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1607679440074" />
-    <state width="1387" height="496" key="GridCell.Tab.0.left" timestamp="1607679440074">
+    <state width="1387" height="324" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1608023704855" />
+    <state width="1387" height="324" key="GridCell.Tab.0.left" timestamp="1608023704855">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1387" height="496" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1607679440074" />
-    <state width="1387" height="496" key="GridCell.Tab.0.right" timestamp="1607679440074">
+    <state width="1387" height="324" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1608023704855" />
+    <state width="1387" height="324" key="GridCell.Tab.0.right" timestamp="1608023704855">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1387" height="496" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1607679440074" />
-    <state width="1387" height="496" key="GridCell.Tab.1.bottom" timestamp="1607679440074">
+    <state width="1387" height="324" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1608023704855" />
+    <state width="1387" height="324" key="GridCell.Tab.1.bottom" timestamp="1608023704855">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1387" height="496" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1607679440074" />
-    <state width="1387" height="496" key="GridCell.Tab.1.center" timestamp="1607679440074">
+    <state width="1387" height="324" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1608023704855" />
+    <state width="1387" height="324" key="GridCell.Tab.1.center" timestamp="1608023704855">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1387" height="496" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1607679440074" />
-    <state width="1387" height="496" key="GridCell.Tab.1.left" timestamp="1607679440074">
+    <state width="1387" height="324" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1608023704855" />
+    <state width="1387" height="324" key="GridCell.Tab.1.left" timestamp="1608023704855">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1387" height="496" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1607679440074" />
-    <state width="1387" height="496" key="GridCell.Tab.1.right" timestamp="1607679440074">
+    <state width="1387" height="324" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1608023704855" />
+    <state width="1387" height="324" key="GridCell.Tab.1.right" timestamp="1608023704855">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1387" height="496" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1607679440074" />
-    <state width="1387" height="496" key="GridCell.Tab.2.bottom" timestamp="1607679440074">
+    <state width="1387" height="324" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1608023704855" />
+    <state width="1387" height="324" key="GridCell.Tab.2.bottom" timestamp="1608023704855">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1387" height="496" key="GridCell.Tab.2.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1607679440074" />
-    <state width="1387" height="496" key="GridCell.Tab.2.center" timestamp="1607679440074">
+    <state width="1387" height="324" key="GridCell.Tab.2.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1608023704855" />
+    <state width="1387" height="324" key="GridCell.Tab.2.center" timestamp="1608023704855">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1387" height="496" key="GridCell.Tab.2.center/0.0.1920.1040@0.0.1920.1040" timestamp="1607679440074" />
-    <state width="1387" height="496" key="GridCell.Tab.2.left" timestamp="1607679440074">
+    <state width="1387" height="324" key="GridCell.Tab.2.center/0.0.1920.1040@0.0.1920.1040" timestamp="1608023704855" />
+    <state width="1387" height="324" key="GridCell.Tab.2.left" timestamp="1608023704855">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1387" height="496" key="GridCell.Tab.2.left/0.0.1920.1040@0.0.1920.1040" timestamp="1607679440074" />
-    <state width="1387" height="496" key="GridCell.Tab.2.right" timestamp="1607679440074">
+    <state width="1387" height="324" key="GridCell.Tab.2.left/0.0.1920.1040@0.0.1920.1040" timestamp="1608023704855" />
+    <state width="1387" height="324" key="GridCell.Tab.2.right" timestamp="1608023704855">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1387" height="496" key="GridCell.Tab.2.right/0.0.1920.1040@0.0.1920.1040" timestamp="1607679440074" />
+    <state width="1387" height="324" key="GridCell.Tab.2.right/0.0.1920.1040@0.0.1920.1040" timestamp="1608023704855" />
     <state x="490" y="175" key="Maven.ArtifactSearchDialog" timestamp="1606724351259">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -547,10 +572,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="694" y="230" key="RollbackChangesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1606209163098" />
-    <state x="461" y="170" width="998" height="708" key="SettingsEditor" timestamp="1607651892900">
+    <state x="461" y="170" width="998" height="708" key="SettingsEditor" timestamp="1607914478150">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="461" y="170" width="998" height="708" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1607651892900" />
+    <state x="461" y="170" width="998" height="708" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1607914478150" />
     <state x="552" y="241" key="Vcs.Push.Dialog.v2" timestamp="1607391269373">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -618,26 +643,6 @@
           <url>file://$PROJECT_DIR$/oauth2-authserver/src/main/java/com/cloud/oauth2authserver/authorization/MyFilterInvocationSecurityMetadataSource.java</url>
           <line>46</line>
           <option name="timeStamp" value="29" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/oauth2-authserver/src/main/java/com/cloud/oauth2authserver/authentication/MyUsernamePasswordAuthenticationFilter.java</url>
-          <line>34</line>
-          <option name="timeStamp" value="32" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/oauth2-authserver/src/main/java/com/cloud/oauth2authserver/authentication/MyUsernamePasswordAuthenticationProvider.java</url>
-          <line>28</line>
-          <option name="timeStamp" value="33" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/oauth2-authserver/src/main/java/com/cloud/oauth2authserver/service/hystrix/UserServiceFallbackImpl.java</url>
-          <line>15</line>
-          <option name="timeStamp" value="36" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/user-resource-server/src/main/java/com/cloud/oauth2resourceserver/controller/UserController.java</url>
-          <line>24</line>
-          <option name="timeStamp" value="48" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

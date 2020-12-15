@@ -8,7 +8,7 @@ import java.util.List;
  * QQ用户认证信息封装类
  */
 
-public class QQUserAuth {
+public class UserAuth {
     /** 用户ID */
     private Long id;
     /** 用户账号 */

@@ -1,17 +1,17 @@
 package com.cloud.oauth2authserver.service.impl;
 
 import com.alibaba.fastjson.JSON;
-import com.cloud.oauth2authserver.entity.CustomUser;
 import com.cloud.oauth2authserver.service.UserService;
-import model.ext.QQUserAuth;
-import model.request.QQUserQuery;
+
+import model.domain.Role;
+import org.springframework.security.core.userdetails.User;
+import model.request.UserQuery;
 import model.response.ResponseResult;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.security.authentication.InternalAuthenticationServiceException;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
-import org.springframework.security.core.userdetails.User;
+
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
@@ -38,22 +38,23 @@ public class UserDetailsServiceImpl implements UserDetailsService {
         if(StringUtils.isEmpty(username)) {
             throw new UsernameNotFoundException("UserDetailsService没有接收到用户账号");
         } else {
-            QQUserQuery query = new QQUserQuery();
+            UserQuery query = new UserQuery();
             query.setUsername(username);
 
             /**
              * 根据用户名，查询用户信息
              */
-            ResponseResult result = userService.getQQUserAuth(query);
+            ResponseResult result = userService.getUserAuth(query);
             if (result == null) {
                 throw new InternalAuthenticationServiceException("UserDetailsService查询用户账号信息失败");
             } else if (result.get("code").equals("300")) {
                 throw new UsernameNotFoundException(String.format("用户'%s'不存在", username));
             } else {
-                QQUserAuth user = JSON.parseObject(JSON.toJSONString(result.get("QQUserAuth")), QQUserAuth.class);
+                model.domain.User user = JSON.parseObject(JSON.toJSONString(result.get("UserAuth")), model.domain.User.class);
                 List<GrantedAuthority> grantedAuthorities = new ArrayList<>();
-                for (String role : user.getRoles()) {
-                    grantedAuthorities.add(new SimpleGrantedAuthority(role));
+                for (Role role : user.getRoles()) {
+                    String roleName = role.getName();
+                    grantedAuthorities.add(new SimpleGrantedAuthority(roleName));
                 }
 
                 /**

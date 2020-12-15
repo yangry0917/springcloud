@@ -5,7 +5,7 @@ package model.request;
  * QQ用户查询条件封装类
  */
 
-public class QQUserQuery {
+public class UserQuery {
     /** 用户账号 */
     private String username;
 
