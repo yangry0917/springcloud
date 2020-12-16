@@ -20,7 +20,9 @@ import org.springframework.util.StringUtils;
 
 import java.util.ArrayList;
 
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 
 @Service
@@ -51,7 +53,7 @@ public class UserDetailsServiceImpl implements UserDetailsService {
                 throw new UsernameNotFoundException(String.format("用户'%s'不存在", username));
             } else {
                 model.domain.User user = JSON.parseObject(JSON.toJSONString(result.get("UserAuth")), model.domain.User.class);
-                List<GrantedAuthority> grantedAuthorities = new ArrayList<>();
+                Set<GrantedAuthority> grantedAuthorities = new HashSet<GrantedAuthority>();
                 for (Role role : user.getRoles()) {
                     String roleName = role.getName();
                     grantedAuthorities.add(new SimpleGrantedAuthority(roleName));

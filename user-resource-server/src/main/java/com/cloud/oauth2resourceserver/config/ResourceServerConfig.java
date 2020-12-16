@@ -29,7 +29,7 @@ public class ResourceServerConfig extends ResourceServerConfigurerAdapter {
                 .cors()
                 .and()
                 .authorizeRequests()
-                .antMatchers("/getUserAuth","/mappers/**","/static/**").permitAll()
+                .antMatchers("/getUserAuth").permitAll()
                 .anyRequest()//.permitAll();
                 .authenticated();
     }

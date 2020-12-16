@@ -4,6 +4,7 @@ import org.springframework.security.core.userdetails.UserDetails;
 
 import java.io.Serializable;
 import java.util.List;
+import java.util.Set;
 
 public class User implements UserDetails, Serializable {
 
@@ -11,7 +12,7 @@ public class User implements UserDetails, Serializable {
     private String username;
     private String password;
 
-    private List<Role> authorities;
+    private Set<Role> authorities;
 
     public Long getId() {
         return id;
@@ -40,11 +41,12 @@ public class User implements UserDetails, Serializable {
     }
 
     @Override
-    public List<Role> getAuthorities() {
+    public Set<Role> getAuthorities() {
         return authorities;
     }
 
-    public void setAuthorities(List<Role> authorities) {
+
+    public void setAuthorities(Set<Role> authorities) {
         this.authorities = authorities;
     }
 

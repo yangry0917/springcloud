@@ -21,14 +21,15 @@ public class MyAuthenticationSuccessHandler extends SavedRequestAwareAuthenticat
     @Autowired
     private ObjectMapper objectMapper;
 
-    /*public MyAuthenticationSuccessHandler() {
-        *//**
+
+    public MyAuthenticationSuccessHandler() {
+        /**
          * 指定默认登录成功请求的URL和是否总是使用默认登录成功请求的URL
          * 注意：自定义的认证成功处理器，如果不指定，默认登录成功请求的URL是"/"
-         *//*
+         */
         this.setDefaultTargetUrl(ConfigConstant.DEFAULT_LOGIN_SUCCESSFUL_REQUEST_URL);
         this.setAlwaysUseDefaultTargetUrl(ConfigConstant.ALWAYS_USE_DEFAULT_LOGIN_SUCCESSFUL_REQUEST_URL);
-    }*/
+    }
 
     @Override
     public void onAuthenticationSuccess(HttpServletRequest request, HttpServletResponse response, Authentication authentication) throws ServletException, IOException, IOException, ServletException {

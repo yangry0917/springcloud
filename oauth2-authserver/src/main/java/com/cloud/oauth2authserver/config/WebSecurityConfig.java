@@ -1,13 +1,16 @@
 package com.cloud.oauth2authserver.config;
 
+import com.cloud.oauth2authserver.authentication.MyUsernamePasswordAuthenticationProvider;
 import com.cloud.oauth2authserver.constant.ConfigConstant;
 import com.cloud.oauth2authserver.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.authentication.AuthenticationManager;
+import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
+import org.springframework.security.config.annotation.web.builders.WebSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.core.userdetails.UserDetailsService;
@@ -26,6 +29,9 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     UserDetailsService userDetailsServiceImpl;
 
     @Autowired
+    MyUsernamePasswordAuthenticationProvider myUsernamePasswordAuthenticationProvider;
+
+    @Autowired
     private MyUsernamePasswordAuthenticationConfig myUsernamePasswordAuthenticationConfig;
     /**
      * 用户认证配置
@@ -36,6 +42,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
          * 指定用户认证时，默认从哪里获取认证用户信息
          */
         auth.userDetailsService(userDetailsServiceImpl);
+        auth.authenticationProvider(myUsernamePasswordAuthenticationProvider);
     }
 
     /**
@@ -47,17 +54,38 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
          * 不允许跨域请求，表单认证请求不需要权限，其它请求都需要认证
          */
         http
+            .authorizeRequests()
+            .antMatchers(
+            "/login",
+            "/actuator/**",
+            "/oauth/*",
+            "/user/*",
+            "/token/**")
+            .permitAll()
+            .anyRequest().authenticated();
+        http
+            .csrf()
+            .disable()
+            .apply(myUsernamePasswordAuthenticationConfig)
+            .and()
+            .formLogin()
+            .permitAll();
+        /*http
                 .csrf()
                 .disable()
-                .apply(myUsernamePasswordAuthenticationConfig)
-                .and()
                 .formLogin()
                 .permitAll()
                 .and()
                 .authorizeRequests()
                 .anyRequest()
-                .authenticated();
+                .authenticated();*/
 
+    }
+
+    @Override
+    public void configure(WebSecurity web) throws Exception {
+        web.ignoring().antMatchers("/css/**", "/js/**", "/fonts/**",
+                "/icon/**", "/favicon.ico");
     }
 
     @Bean

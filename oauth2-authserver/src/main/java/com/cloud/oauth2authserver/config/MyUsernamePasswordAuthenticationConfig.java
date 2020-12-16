@@ -44,8 +44,8 @@ public class MyUsernamePasswordAuthenticationConfig extends SecurityConfigurerAd
         /**
          * 指定自定义的认证成功和失败的处理器
          */
-        authenticationFilter.setAuthenticationSuccessHandler(myAuthenticationSuccessHandler);
-        authenticationFilter.setAuthenticationFailureHandler(myAuthenticationFailureHandler);
+        //authenticationFilter.setAuthenticationSuccessHandler(myAuthenticationSuccessHandler);
+        //authenticationFilter.setAuthenticationFailureHandler(myAuthenticationFailureHandler);
 
         /**
          * 把自定义的用户名密码认证过滤器和处理器添加到UsernamePasswordAuthenticationFilter过滤器之前

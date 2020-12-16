@@ -11,9 +11,15 @@ import org.springframework.security.oauth2.config.annotation.web.configuration.A
 import org.springframework.security.oauth2.config.annotation.web.configuration.EnableAuthorizationServer;
 import org.springframework.security.oauth2.config.annotation.web.configurers.AuthorizationServerEndpointsConfigurer;
 import org.springframework.security.oauth2.config.annotation.web.configurers.AuthorizationServerSecurityConfigurer;
+import org.springframework.security.oauth2.provider.approval.ApprovalStore;
+import org.springframework.security.oauth2.provider.approval.JdbcApprovalStore;
+import org.springframework.security.oauth2.provider.client.JdbcClientDetailsService;
+import org.springframework.security.oauth2.provider.code.JdbcAuthorizationCodeServices;
 import org.springframework.security.oauth2.provider.token.TokenStore;
 import org.springframework.security.oauth2.provider.token.store.JwtAccessTokenConverter;
 import org.springframework.security.oauth2.provider.token.store.JwtTokenStore;
+
+import javax.sql.DataSource;
 
 /**
  * OAuth的授权服务器配置
@@ -31,6 +37,7 @@ public class AuthorizationServerConfig extends AuthorizationServerConfigurerAdap
     @Autowired
     private UserDetailsService userDetailsServiceImpl;
 
+
     /**
      * 授权服务器安全配置：
      */
@@ -43,6 +50,7 @@ public class AuthorizationServerConfig extends AuthorizationServerConfigurerAdap
                 .tokenKeyAccess("permitAll()")
                 .checkTokenAccess("isAuthenticated()")
                 .allowFormAuthenticationForClients();
+
     }
 
     /**
@@ -86,6 +94,7 @@ public class AuthorizationServerConfig extends AuthorizationServerConfigurerAdap
                 .accessTokenValiditySeconds(3600)
                 .authorizedGrantTypes("client_credentials")
                 .scopes("all");
+
     }
 
     /**
@@ -109,6 +118,7 @@ public class AuthorizationServerConfig extends AuthorizationServerConfigurerAdap
          * 设置令牌加强器（生成令牌时使用）
          */
         endpoints.tokenEnhancer(jwtAccessTokenConverter());
+
     }
 
     /**
@@ -134,4 +144,6 @@ public class AuthorizationServerConfig extends AuthorizationServerConfigurerAdap
         converter.setSigningKey("signingKey");
         return converter;
     }
+
+
 }

@@ -1,7 +1,9 @@
 package com.cloud.oauth2authserver.controller;
 
 
+import com.alibaba.fastjson.JSONObject;
 import com.cloud.oauth2authserver.service.UserService;
+import dto.TokenResultDTO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -9,7 +11,13 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.servlet.ModelAndView;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 
 @RestController
 public class MainController {
@@ -28,15 +36,16 @@ public class MainController {
     }
 
     @RequestMapping("/login")
-    public String login() {
+    public /*String*/ModelAndView login() {
         //UserDetails user  = myUserDetailsServiceImpl.loadUserByUsername("admin");
-        return "login";
+        return /*"login"*/new ModelAndView("login");
     }
 
     @RequestMapping("/login-error")
-    public String loginError(Model model) {
+    public /*String*/ModelAndView  loginError(Model model) {
         model.addAttribute( "loginError"  , true);
-        return "login-error";
+        model.addAttribute("errorMsg", "登陆失败，账号或者密码错误！");
+        return /*"login-error"*/new ModelAndView("login", "userModel", model);
     }
 
     @GetMapping("/401")

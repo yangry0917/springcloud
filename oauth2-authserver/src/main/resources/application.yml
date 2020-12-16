@@ -24,6 +24,12 @@ spring:
     url: jdbc:mysql://localhost:3306/springcloud?autoReconnect=true&useSSL=false&useUnicode=true&characterEncoding=utf-8
     password: root
     username: root
+  thymeleaf:
+    cache: false #关闭页面缓存
+    encoding: UTF-8 #模板编码
+    prefix: classpath:/templates/ #页面映射路径
+    suffix: .html #视图的后缀
+    mode: HTML5 #模板模式
 
 feign:
   hystrix:
