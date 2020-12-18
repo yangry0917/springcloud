@@ -2,18 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0d313edf-5559-494e-97d3-872947edbf4f" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/oauth2-authserver/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/oauth2-authserver/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/oauth2-authserver/src/main/java/com/cloud/oauth2authserver/authentication/MyAuthenticationSuccessHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/oauth2-authserver/src/main/java/com/cloud/oauth2authserver/authentication/MyAuthenticationSuccessHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/oauth2-authserver/src/main/java/com/cloud/oauth2authserver/authorization/AuthorizationServerConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/oauth2-authserver/src/main/java/com/cloud/oauth2authserver/authorization/AuthorizationServerConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/oauth2-authserver/src/main/java/com/cloud/oauth2authserver/config/MyUsernamePasswordAuthenticationConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/oauth2-authserver/src/main/java/com/cloud/oauth2authserver/config/MyUsernamePasswordAuthenticationConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/oauth2-authserver/src/main/java/com/cloud/oauth2authserver/config/WebSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/oauth2-authserver/src/main/java/com/cloud/oauth2authserver/config/WebSecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/oauth2-authserver/src/main/java/com/cloud/oauth2authserver/constant/ConfigConstant.java" beforeDir="false" afterPath="$PROJECT_DIR$/oauth2-authserver/src/main/java/com/cloud/oauth2authserver/constant/ConfigConstant.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/oauth2-authserver/src/main/java/com/cloud/oauth2authserver/controller/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/oauth2-authserver/src/main/java/com/cloud/oauth2authserver/controller/MainController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/oauth2-authserver/src/main/java/com/cloud/oauth2authserver/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/oauth2-authserver/src/main/java/com/cloud/oauth2authserver/entity/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/oauth2-authserver/src/main/java/com/cloud/oauth2authserver/service/impl/UserDetailsServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/oauth2-authserver/src/main/java/com/cloud/oauth2authserver/service/impl/UserDetailsServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/oauth2-authserver/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/oauth2-authserver/src/main/resources/application.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/user-resource-server/src/main/java/com/cloud/oauth2resourceserver/config/ResourceServerConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-resource-server/src/main/java/com/cloud/oauth2resourceserver/config/ResourceServerConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-resource-server/src/main/java/com/cloud/oauth2resourceserver/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-resource-server/src/main/java/com/cloud/oauth2resourceserver/controller/UserController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,7 +61,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/oauth2-authserver/src/main/resources/templates" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.34167895" />
@@ -304,7 +297,7 @@
     <option name="viewStates">
       <list>
         <serviceView>
-          <option name="contentProportion" value="0.3219129" />
+          <option name="contentProportion" value="0.22510822" />
           <treeState>
             <expand>
               <path>
@@ -355,6 +348,7 @@
       <workItem from="1607392036016" duration="39733000" />
       <workItem from="1607565155610" duration="28916000" />
       <workItem from="1607907420872" duration="25826000" />
+      <workItem from="1608112821538" duration="12882000" />
     </task>
     <task id="LOCAL-00001" summary="spring cloud hystrix dashboard添加；&#10;turbine功能添加">
       <created>1606180697259</created>
@@ -405,7 +399,14 @@
       <option name="project" value="LOCAL" />
       <updated>1607391207961</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="初步实现oauth2.0授权码模式;">
+      <created>1608112669318</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1608112669318</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -451,10 +452,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="527" y="246" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1607918045931" />
-    <state x="765" y="229" width="604" height="568" key="#com.intellij.ide.util.MemberChooser" timestamp="1608106845635">
+    <state x="765" y="229" width="604" height="568" key="#com.intellij.ide.util.MemberChooser" timestamp="1608174979413">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="765" y="229" width="604" height="568" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1608106845635" />
+    <state x="765" y="229" width="604" height="568" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1608174979413" />
     <state x="802" y="374" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1606881973516">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -495,54 +496,54 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="739" y="261" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1607659610156" />
-    <state width="1252" height="450" key="GridCell.Tab.0.bottom" timestamp="1608112585880">
+    <state width="1431" height="315" key="GridCell.Tab.0.bottom" timestamp="1608274333080">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1252" height="450" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1608112585880" />
-    <state width="1252" height="450" key="GridCell.Tab.0.center" timestamp="1608112585880">
+    <state width="1431" height="315" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1608274333080" />
+    <state width="1431" height="315" key="GridCell.Tab.0.center" timestamp="1608274333080">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1252" height="450" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1608112585880" />
-    <state width="1252" height="450" key="GridCell.Tab.0.left" timestamp="1608112585880">
+    <state width="1431" height="315" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1608274333080" />
+    <state width="1431" height="315" key="GridCell.Tab.0.left" timestamp="1608274333080">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1252" height="450" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1608112585880" />
-    <state width="1252" height="450" key="GridCell.Tab.0.right" timestamp="1608112585880">
+    <state width="1431" height="315" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1608274333080" />
+    <state width="1431" height="315" key="GridCell.Tab.0.right" timestamp="1608274333080">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1252" height="450" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1608112585880" />
-    <state width="1252" height="450" key="GridCell.Tab.1.bottom" timestamp="1608112585880">
+    <state width="1431" height="315" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1608274333080" />
+    <state width="1431" height="315" key="GridCell.Tab.1.bottom" timestamp="1608274333080">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1252" height="450" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1608112585880" />
-    <state width="1252" height="450" key="GridCell.Tab.1.center" timestamp="1608112585880">
+    <state width="1431" height="315" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1608274333080" />
+    <state width="1431" height="315" key="GridCell.Tab.1.center" timestamp="1608274333080">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1252" height="450" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1608112585880" />
-    <state width="1252" height="450" key="GridCell.Tab.1.left" timestamp="1608112585880">
+    <state width="1431" height="315" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1608274333080" />
+    <state width="1431" height="315" key="GridCell.Tab.1.left" timestamp="1608274333080">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1252" height="450" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1608112585880" />
-    <state width="1252" height="450" key="GridCell.Tab.1.right" timestamp="1608112585880">
+    <state width="1431" height="315" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1608274333080" />
+    <state width="1431" height="315" key="GridCell.Tab.1.right" timestamp="1608274333080">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1252" height="450" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1608112585880" />
-    <state width="1252" height="450" key="GridCell.Tab.2.bottom" timestamp="1608112585880">
+    <state width="1431" height="315" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1608274333080" />
+    <state width="1431" height="315" key="GridCell.Tab.2.bottom" timestamp="1608274333080">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1252" height="450" key="GridCell.Tab.2.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1608112585880" />
-    <state width="1252" height="450" key="GridCell.Tab.2.center" timestamp="1608112585880">
+    <state width="1431" height="315" key="GridCell.Tab.2.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1608274333080" />
+    <state width="1431" height="315" key="GridCell.Tab.2.center" timestamp="1608274333080">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1252" height="450" key="GridCell.Tab.2.center/0.0.1920.1040@0.0.1920.1040" timestamp="1608112585880" />
-    <state width="1252" height="450" key="GridCell.Tab.2.left" timestamp="1608112585880">
+    <state width="1431" height="315" key="GridCell.Tab.2.center/0.0.1920.1040@0.0.1920.1040" timestamp="1608274333080" />
+    <state width="1431" height="315" key="GridCell.Tab.2.left" timestamp="1608274333080">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1252" height="450" key="GridCell.Tab.2.left/0.0.1920.1040@0.0.1920.1040" timestamp="1608112585880" />
-    <state width="1252" height="450" key="GridCell.Tab.2.right" timestamp="1608112585880">
+    <state width="1431" height="315" key="GridCell.Tab.2.left/0.0.1920.1040@0.0.1920.1040" timestamp="1608274333080" />
+    <state width="1431" height="315" key="GridCell.Tab.2.right" timestamp="1608274333080">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1252" height="450" key="GridCell.Tab.2.right/0.0.1920.1040@0.0.1920.1040" timestamp="1608112585880" />
+    <state width="1431" height="315" key="GridCell.Tab.2.right/0.0.1920.1040@0.0.1920.1040" timestamp="1608274333080" />
     <state x="490" y="175" key="Maven.ArtifactSearchDialog" timestamp="1606724351259">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -559,10 +560,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="461" y="170" width="998" height="708" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1607914478150" />
-    <state x="552" y="241" key="Vcs.Push.Dialog.v2" timestamp="1608024098240">
+    <state x="552" y="241" key="Vcs.Push.Dialog.v2" timestamp="1608112721760">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="241" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1608024098240" />
+    <state x="552" y="241" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1608112721760" />
     <state width="968" height="528" key="XDebugger.FullValuePopup" timestamp="1607674253562">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -631,6 +632,11 @@
           <url>file://$PROJECT_DIR$/oauth2-authserver/src/main/java/com/cloud/oauth2authserver/controller/MainController.java</url>
           <line>40</line>
           <option name="timeStamp" value="72" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/user-resource-server/src/main/java/com/cloud/oauth2resourceserver/controller/TestController.java</url>
+          <line>17</line>
+          <option name="timeStamp" value="74" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

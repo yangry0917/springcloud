@@ -6,6 +6,7 @@ import model.domain.User;
 import model.request.UserQuery;
 import model.response.ResponseResult;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -38,7 +39,7 @@ public class UserController {
      * 已认证用户查询自己的用户信息，不允许查询他人的用户信息（要求用户已认证，即要求有合法的访问令牌）
      */
     @PostMapping("/api/getQQUser")
-    //@PreAuthorize("principal.equals(query.getUsername())")
+    @PreAuthorize("principal.equals(#query.getUsername())")
     public ResponseResult getQQUser(@RequestBody UserQuery query) {
         User user = null;
         if(query == null) {

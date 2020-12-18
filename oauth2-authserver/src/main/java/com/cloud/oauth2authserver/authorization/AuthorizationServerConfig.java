@@ -1,5 +1,6 @@
 package com.cloud.oauth2authserver.authorization;
 
+import com.cloud.oauth2authserver.token.MyTokenEnhancer;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -15,11 +16,14 @@ import org.springframework.security.oauth2.provider.approval.ApprovalStore;
 import org.springframework.security.oauth2.provider.approval.JdbcApprovalStore;
 import org.springframework.security.oauth2.provider.client.JdbcClientDetailsService;
 import org.springframework.security.oauth2.provider.code.JdbcAuthorizationCodeServices;
+import org.springframework.security.oauth2.provider.token.TokenEnhancer;
+import org.springframework.security.oauth2.provider.token.TokenEnhancerChain;
 import org.springframework.security.oauth2.provider.token.TokenStore;
 import org.springframework.security.oauth2.provider.token.store.JwtAccessTokenConverter;
 import org.springframework.security.oauth2.provider.token.store.JwtTokenStore;
 
 import javax.sql.DataSource;
+import java.util.Arrays;
 
 /**
  * OAuth的授权服务器配置
@@ -103,6 +107,12 @@ public class AuthorizationServerConfig extends AuthorizationServerConfigurerAdap
     @Override
     public void configure(AuthorizationServerEndpointsConfigurer endpoints) throws Exception {
         /**
+         * 将增强的token设置到增强链中
+         */
+        TokenEnhancerChain enhancerChain = new TokenEnhancerChain();
+        enhancerChain.setTokenEnhancers(Arrays.asList(myTokenEnhancer(),jwtAccessTokenConverter()));
+
+        /**
          * 设置用户认证的管理器和生成的令牌的存储方式
          */
         endpoints
@@ -117,8 +127,8 @@ public class AuthorizationServerConfig extends AuthorizationServerConfigurerAdap
         /**
          * 设置令牌加强器（生成令牌时使用）
          */
-        endpoints.tokenEnhancer(jwtAccessTokenConverter());
-
+        //endpoints.tokenEnhancer(jwtAccessTokenConverter());
+        endpoints.tokenEnhancer(enhancerChain);
     }
 
     /**
@@ -141,9 +151,13 @@ public class AuthorizationServerConfig extends AuthorizationServerConfigurerAdap
          * 设置JWT令牌的签名key，此外还可以往令牌里添加数据
          */
         JwtAccessTokenConverter converter = new JwtAccessTokenConverter();
-        converter.setSigningKey("signingKey");
+        converter.setSigningKey("Jky_XianNingRoad_No51_Key");
         return converter;
     }
 
+    @Bean
+    public TokenEnhancer myTokenEnhancer(){
+        return new MyTokenEnhancer();
+    }
 
 }

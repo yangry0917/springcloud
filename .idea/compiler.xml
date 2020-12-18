@@ -9,15 +9,15 @@
         <module name="hystrix-turbine" />
         <module name="spring-cloud-config-client" />
         <module name="eurekaconsumer" />
-        <module name="common-utils" />
         <module name="eureka-client" />
         <module name="zipkin-server" />
         <module name="eureka-consumer" />
         <module name="user-resource-server" />
         <module name="eureka-server" />
         <module name="oauth2-authserver" />
-        <module name="ribbon-server" />
         <module name="gateway-server" />
+        <module name="ribbon-server" />
+        <module name="common-utils" />
         <module name="spring-cloud-config-server" />
       </profile>
     </annotationProcessing>
