@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0d313edf-5559-494e-97d3-872947edbf4f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/oauth2-authserver/src/main/java/com/cloud/oauth2authserver/authorization/AuthorizationServerConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/oauth2-authserver/src/main/java/com/cloud/oauth2authserver/authorization/AuthorizationServerConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-resource-server/src/main/java/com/cloud/oauth2resourceserver/config/ResourceServerConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-resource-server/src/main/java/com/cloud/oauth2resourceserver/config/ResourceServerConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-resource-server/src/main/java/com/cloud/oauth2resourceserver/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-resource-server/src/main/java/com/cloud/oauth2resourceserver/controller/UserController.java" afterDir="false" />
-    </list>
+    <list default="true" id="0d313edf-5559-494e-97d3-872947edbf4f" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -307,7 +301,7 @@
               <path>
                 <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
                 <item name="Spring Boot" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-                <item name="Running" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+                <item name="Finished" type="7427dc5b:ServiceModel$ServiceGroupNode" />
               </path>
               <path>
                 <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
@@ -348,7 +342,7 @@
       <workItem from="1607392036016" duration="39733000" />
       <workItem from="1607565155610" duration="28916000" />
       <workItem from="1607907420872" duration="25826000" />
-      <workItem from="1608112821538" duration="12882000" />
+      <workItem from="1608112821538" duration="13141000" />
     </task>
     <task id="LOCAL-00001" summary="spring cloud hystrix dashboard添加；&#10;turbine功能添加">
       <created>1606180697259</created>
@@ -406,7 +400,14 @@
       <option name="project" value="LOCAL" />
       <updated>1608112669318</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="1.在认证、授权服务器段添加了 jwtTOkenEnhancer增强器，可以在access token中增添自定义信息&#10;2.在用户资源端增添了TestController，用于解析OAuth2Token">
+      <created>1608274472597</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1608274472597</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -433,7 +434,8 @@
     <MESSAGE value="在网关、服务端和消费端增添链路追踪相关配置；" />
     <MESSAGE value="作为注册中心禁止客户端的注册行为" />
     <MESSAGE value="完成认证服务器与用户资源服务器之前调用；&#10;完成认证服务器认证用户；" />
-    <option name="LAST_COMMIT_MESSAGE" value="完成认证服务器与用户资源服务器之前调用；&#10;完成认证服务器认证用户；" />
+    <MESSAGE value="1.在认证、授权服务器段添加了 jwtTOkenEnhancer增强器，可以在access token中增添自定义信息&#10;2.在用户资源端增添了TestController，用于解析OAuth2Token" />
+    <option name="LAST_COMMIT_MESSAGE" value="1.在认证、授权服务器段添加了 jwtTOkenEnhancer增强器，可以在access token中增添自定义信息&#10;2.在用户资源端增添了TestController，用于解析OAuth2Token" />
   </component>
   <component name="WindowStateProjectService">
     <state x="590" y="15" key="#EurekaServerApplication8001" timestamp="1605604009100">
@@ -484,14 +486,14 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="690" y="279" key="#com.intellij.util.ui.classpath.ChooseLibrariesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1605662937754" />
-    <state x="531" y="113" key="CommitChangelistDialog2" timestamp="1607391200575">
+    <state x="531" y="113" key="CommitChangelistDialog2" timestamp="1608274467531">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="531" y="113" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1607391200575" />
-    <state x="184" y="86" key="DiffContextDialog" timestamp="1606374022677">
+    <state x="531" y="113" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1608274467531" />
+    <state x="184" y="86" key="DiffContextDialog" timestamp="1608274352919">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="184" y="86" key="DiffContextDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1606374022676" />
+    <state x="184" y="86" key="DiffContextDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1608274352919" />
     <state x="739" y="261" key="FileChooserDialogImpl" timestamp="1607659610156">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -560,10 +562,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="461" y="170" width="998" height="708" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1607914478150" />
-    <state x="552" y="241" key="Vcs.Push.Dialog.v2" timestamp="1608112721760">
+    <state x="552" y="241" key="Vcs.Push.Dialog.v2" timestamp="1608274474274">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="241" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1608112721760" />
+    <state x="552" y="241" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1608274474274" />
     <state width="968" height="528" key="XDebugger.FullValuePopup" timestamp="1607674253562">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -576,18 +578,18 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="640" y="344" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1607565166298" />
-    <state x="752" y="437" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1606449878626">
+    <state x="752" y="437" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1608274498588">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="752" y="437" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1606449878626" />
+    <state x="752" y="437" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1608274498588" />
     <state x="567" y="220" width="786" height="600" key="find.popup" timestamp="1607420064255">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="567" y="220" width="786" height="600" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1607420064255" />
-    <state x="722" y="232" key="git4idea.branch.GitSmartOperationDialog" timestamp="1606785844337">
+    <state x="722" y="232" key="git4idea.branch.GitSmartOperationDialog" timestamp="1608274518617">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="722" y="232" key="git4idea.branch.GitSmartOperationDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1606785844337" />
+    <state x="722" y="232" key="git4idea.branch.GitSmartOperationDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1608274518617" />
     <state x="487" y="241" key="new project wizard" timestamp="1607581982042">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
