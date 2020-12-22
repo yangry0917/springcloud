@@ -6,23 +6,25 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="hystrix-turbine" />
-        <module name="spring-cloud-config-client" />
-        <module name="eurekaconsumer" />
-        <module name="eureka-client" />
-        <module name="zipkin-server" />
-        <module name="eureka-consumer" />
-        <module name="user-resource-server" />
-        <module name="eureka-server" />
-        <module name="oauth2-authserver" />
         <module name="gateway-server" />
-        <module name="ribbon-server" />
-        <module name="common-utils" />
         <module name="spring-cloud-config-server" />
+        <module name="eurekaconsumer" />
+        <module name="user-resource-server" />
+        <module name="eureka-client" />
+        <module name="oauth2-client" />
+        <module name="spring-cloud-config-client" />
+        <module name="ribbon-server" />
+        <module name="zipkin-server" />
+        <module name="eureka-server" />
+        <module name="common-utils" />
+        <module name="hystrix-turbine" />
+        <module name="oauth2-authserver" />
+        <module name="eureka-consumer" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="eurekaconsumer" target="1.8" />
+      <module name="oauth2-client" target="1.8" />
       <module name="zipkin-server" target="1.8" />
     </bytecodeTargetLevel>
   </component>
@@ -35,6 +37,7 @@
       <module name="gateway-server" options="-parameters" />
       <module name="hystrix-turbine" options="-parameters" />
       <module name="oauth2-authserver" options="-parameters" />
+      <module name="oauth2-client" options="-parameters" />
       <module name="ribbon-server" options="-parameters" />
       <module name="spring-cloud-config-client" options="-parameters" />
       <module name="spring-cloud-config-server" options="-parameters" />

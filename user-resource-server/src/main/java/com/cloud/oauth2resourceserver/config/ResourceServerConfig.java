@@ -20,6 +20,10 @@ import org.springframework.security.oauth2.provider.token.store.JwtTokenStore;
 @EnableResourceServer
 public class ResourceServerConfig extends ResourceServerConfigurerAdapter {
 
+    /**
+     * oauth_client_details表的 resource_ids字段
+     */
+    private static final String RESOURCE_ID = "user-resource";
 
     @Autowired
     private MyAccessTokenConverter myAccessTokenConverter;
@@ -47,6 +51,8 @@ public class ResourceServerConfig extends ResourceServerConfigurerAdapter {
      */
     @Override
     public void configure(ResourceServerSecurityConfigurer resources) throws Exception {
+
+        resources.resourceId(RESOURCE_ID);
         /**
          * 设置令牌的存储方式
          */

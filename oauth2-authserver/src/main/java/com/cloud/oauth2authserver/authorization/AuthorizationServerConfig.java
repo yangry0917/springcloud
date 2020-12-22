@@ -12,6 +12,7 @@ import org.springframework.security.oauth2.config.annotation.web.configuration.A
 import org.springframework.security.oauth2.config.annotation.web.configuration.EnableAuthorizationServer;
 import org.springframework.security.oauth2.config.annotation.web.configurers.AuthorizationServerEndpointsConfigurer;
 import org.springframework.security.oauth2.config.annotation.web.configurers.AuthorizationServerSecurityConfigurer;
+import org.springframework.security.oauth2.provider.ClientDetailsService;
 import org.springframework.security.oauth2.provider.approval.ApprovalStore;
 import org.springframework.security.oauth2.provider.approval.JdbcApprovalStore;
 import org.springframework.security.oauth2.provider.client.JdbcClientDetailsService;
@@ -41,7 +42,19 @@ public class AuthorizationServerConfig extends AuthorizationServerConfigurerAdap
     @Autowired
     private UserDetailsService userDetailsServiceImpl;
 
+    @Autowired
+    private DataSource dataSource;
 
+
+    /**
+     * 定义clientDetails存储的方式-》Jdbc的方式，注入DataSource
+     *
+     * @return
+     */
+    @Bean
+    public ClientDetailsService clientDetails() {
+        return new JdbcClientDetailsService(dataSource);
+    }
     /**
      * 授权服务器安全配置：
      */
@@ -62,6 +75,10 @@ public class AuthorizationServerConfig extends AuthorizationServerConfigurerAdap
      */
     @Override
     public void configure(ClientDetailsServiceConfigurer clients) throws Exception {
+
+        clients.withClientDetails(clientDetails());
+        //注意密码需要在数据库加密存储 oauth_client_details表的 resource_ids字段
+        //System.out.println(passwordEncoder.encode("secret_1"));
         /**
          * 在内存中添加四个客户端配置（还可以在数据库中配置）：
          * client_1只能使用授权码授权方式和刷新令牌的方式获取令牌
@@ -69,7 +86,7 @@ public class AuthorizationServerConfig extends AuthorizationServerConfigurerAdap
          * client_3只能使用简化授权方式获取令牌
          * client_4只能使用客户端授权方式获取令牌
          */
-        clients
+        /*clients
                 .inMemory()
                 .withClient("client_1")
                 .secret(passwordEncoder.encode("secret_1"))
@@ -97,7 +114,7 @@ public class AuthorizationServerConfig extends AuthorizationServerConfigurerAdap
                 .secret(passwordEncoder.encode("secret_4"))
                 .accessTokenValiditySeconds(3600)
                 .authorizedGrantTypes("client_credentials")
-                .scopes("all");
+                .scopes("all");*/
 
     }
 
