@@ -1,6 +1,6 @@
 package com.cloud.oauth2authserver.mapper;
 
-import com.cloud.oauth2authserver.entity.Role;
+import model.domain.Role;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.Select;

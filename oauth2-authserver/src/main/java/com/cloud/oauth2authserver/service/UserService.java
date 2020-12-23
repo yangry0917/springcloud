@@ -18,7 +18,7 @@ public interface UserService {
     /**
      * 调用USER-RESOURCE-SERVER微服务的getQQUserAuth接口查询用户信息
      */
-    @PostMapping("/getUserAuth")
+    @PostMapping("/user/resource/getUserAuth")
     ResponseResult getUserAuth(@RequestBody UserQuery query);
 
 

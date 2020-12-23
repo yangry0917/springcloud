@@ -1,3 +1,4 @@
+# http://localhost:8050/auth/server/oauth/authorize?response_type=code&client_id=client_1&redirect_uri=http://localhost:8060/user/resource/oauth/callback
 spring:
   application:
     name: user-resource-server
@@ -18,6 +19,8 @@ spring:
     username: root
 server:
   port: 8060
+  servlet:
+    context-path: /user/resource
 
 mybatis-plus:
   mapper-locations: classpath:mappers/*.xml
@@ -28,6 +31,20 @@ mybatis-plus:
   #打印sql到控制台
 #  configuration:
 #    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+security:
+  oauth2:
+    authorization:
+      check-token-access: http://localhost:8050/auth/server/oauth/check_token
+    client:
+      access-token-uri: http://localhost:8050/auth/server/oauth/token
+      authorized-grant-types: authorization_code
+      client-id: client_1 #user-service
+      client-secret: secret_1
+      registered-redirect-uri: http://localhost:8060/user/resource/oauth/callback
+      user-authorization-uri: http://localhost:8050/auth/server/oauth/authorize
+    resource:
+      token-info-uri: http://localhost:8050/auth/server/oauth/check_token
 
 eureka:
   client:

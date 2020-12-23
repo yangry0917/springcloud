@@ -3,7 +3,6 @@ package com.cloud.oauth2authserver.controller;
 
 import com.alibaba.fastjson.JSONObject;
 import com.cloud.oauth2authserver.service.UserService;
-import dto.TokenResultDTO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.security.core.userdetails.UserDetails;
