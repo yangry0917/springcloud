@@ -1,7 +1,7 @@
 server:
   port: 8050
-  servlet:
-    context-path: /auth/server
+#  servlet:
+#    context-path: /auth/server
 
 eureka:
   client:
@@ -32,6 +32,12 @@ spring:
     prefix: classpath:/templates/ #页面映射路径
     suffix: .html #视图的后缀
     mode: HTML5 #模板模式
+  redis:
+    database: 1
+    host: 192.168.4.17
+    port: 6379
+    password: 123456
+    timeout: 1800
 
 feign:
   hystrix:

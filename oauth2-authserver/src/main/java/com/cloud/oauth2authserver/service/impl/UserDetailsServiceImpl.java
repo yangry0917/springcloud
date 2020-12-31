@@ -2,7 +2,7 @@ package com.cloud.oauth2authserver.service.impl;
 
 import com.alibaba.fastjson.JSON;
 import com.cloud.oauth2authserver.service.UserService;
-
+import com.cloud.oauth2authserver.util.RedisUtil;
 import model.domain.Role;
 import org.springframework.security.core.userdetails.User;
 import model.request.UserQuery;
@@ -11,17 +11,15 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.InternalAuthenticationServiceException;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
-
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 import org.springframework.util.StringUtils;
 
-import java.util.ArrayList;
-
+import java.util.HashMap;
 import java.util.HashSet;
-import java.util.List;
+import java.util.Map;
 import java.util.Set;
 
 
@@ -31,6 +29,8 @@ public class UserDetailsServiceImpl implements UserDetailsService {
     @Autowired
     private UserService userService;
 
+    @Autowired
+    private RedisUtil redisUtil;
 
     /**
      * 根据用户名获取认证用户信息
@@ -58,6 +58,12 @@ public class UserDetailsServiceImpl implements UserDetailsService {
                     String roleName = role.getName();
                     grantedAuthorities.add(new SimpleGrantedAuthority(roleName));
                 }
+                /**
+                 * 将查询到用户的信息保存进redis,可以供gateway等其他组件获取信息
+                 */
+                Map<String,Object> redisMap = new HashMap<String,Object>(16);
+                redisMap.put("authority",grantedAuthorities);
+                redisUtil.setCacheMap(username,redisMap);
 
                 /**
                  * 创建认证用户对象的第一种方式：

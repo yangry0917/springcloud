@@ -76,7 +76,12 @@ public class AuthorizationServerConfig extends AuthorizationServerConfigurerAdap
     @Override
     public void configure(ClientDetailsServiceConfigurer clients) throws Exception {
 
-        clients.withClientDetails(clientDetails());
+        clients.withClientDetails(clientDetails()) //从数据库中读取数据
+                .inMemory()                        //存入内存中的数据
+                .withClient("gateway-client").secret(passwordEncoder.encode("123456"))
+                .authorizedGrantTypes("refresh_token","authorization_code","password")
+                .accessTokenValiditySeconds(24 * 3600)
+                .scopes("all");
         //注意密码需要在数据库加密存储 oauth_client_details表的 resource_ids字段
         //System.out.println(passwordEncoder.encode("secret_1"));
         /**
@@ -140,6 +145,7 @@ public class AuthorizationServerConfig extends AuthorizationServerConfigurerAdap
          * 必须设置UserDetailsService才能使用refresh_token：指定使用refresh_token换取access_token时，从哪里获取认证用户信息
          */
         endpoints.userDetailsService(userDetailsServiceImpl);
+
 
         /**
          * 设置令牌加强器（生成令牌时使用）

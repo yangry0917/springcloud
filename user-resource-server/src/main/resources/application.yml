@@ -17,6 +17,12 @@ spring:
     url: jdbc:mysql://localhost:3306/springcloud?autoReconnect=true&useSSL=false&useUnicode=true&characterEncoding=utf-8
     password: root
     username: root
+  redis:
+    database: 1
+    host: 192.168.4.17
+    port: 6379
+    password: 123456
+    timeout: 1800
 server:
   port: 8060
   servlet:
@@ -35,16 +41,20 @@ mybatis-plus:
 security:
   oauth2:
     authorization:
-      check-token-access: http://localhost:8050/auth/server/oauth/check_token
+#      check-token-access: http://localhost:8050/auth/server/oauth/check_token
+      check-token-access: http://localhost:8050/oauth/check_token
     client:
-      access-token-uri: http://localhost:8050/auth/server/oauth/token
+#      access-token-uri: http://localhost:8050/auth/server/oauth/token
+      access-token-uri: http://localhost:8050/oauth/token
       authorized-grant-types: authorization_code
       client-id: client_1 #user-service
       client-secret: secret_1
       registered-redirect-uri: http://localhost:8060/user/resource/oauth/callback
-      user-authorization-uri: http://localhost:8050/auth/server/oauth/authorize
+#      user-authorization-uri: http://localhost:8050/auth/server/oauth/authorize
+      user-authorization-uri: http://localhost:8050/oauth/authorize
     resource:
-      token-info-uri: http://localhost:8050/auth/server/oauth/check_token
+      token-info-uri: http://localhost:8050/oauth/check_token
+#      token-info-uri: http://localhost:8050/auth/server/oauth/check_token
 
 eureka:
   client:
